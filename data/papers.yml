@@ -122,3 +122,165 @@ papers:
     status: draft
     raw_imports:
       - papers/My_papers/s13321-022-00584-w.pdf
+
+  - id: lee-2026-genomic-language-based-finemapping
+    domain: genomics
+    title: Genomic Language-based Finemapping Approach (GLFM)
+    authors:
+      - Ingoo Lee
+      - Trey Ideker
+    year: 2026
+    doi: unpublished
+    category: fine-mapping
+    pdf: papers/lee-2026-genomic-language-based-finemapping.pdf
+    source: sources/lee-2026-genomic-language-based-finemapping.md
+    wiki: wiki/genomics/fine-mapping/lee-2026-genomic-language-based-finemapping.md
+    status: draft
+    raw_imports:
+      - https://docs.google.com/document/d/17njk7MrrNCEGBtfHQLFQd9J4W-C40pg5oSYM9xHAqsk
+
+  - id: benner-2016-finemap-efficient-variable-selection
+    domain: genomics
+    title: FINEMAP, efficient variable selection using summary data from genome-wide association studies
+    authors:
+      - Christian Benner
+      - Chris C. A. Spencer
+      - Aki S. Havulinna
+      - Veikko Salomaa
+      - Samuli Ripatti
+      - Matti Pirinen
+    year: 2016
+    doi: 10.1093/bioinformatics/btw018
+    category: fine-mapping
+    pdf: papers/benner-2016-finemap-efficient-variable-selection.pdf
+    source: sources/benner-2016-finemap-efficient-variable-selection.md
+    wiki: wiki/genomics/fine-mapping/benner-2016-finemap-efficient-variable-selection.md
+    status: draft
+    raw_imports:
+      - https://helda.helsinki.fi/server/api/core/bitstreams/c7e5f67b-7c2f-4983-a26b-91d110d204e2/content
+
+  - id: wang-2020-simple-new-approach-to-variable
+    domain: genomics
+    title: A simple new approach to variable selection in regression, with application to genetic fine mapping
+    authors:
+      - Gao Wang
+      - Abhishek Sarkar
+      - Peter Carbonetto
+      - Matthew Stephens
+    year: 2020
+    doi: 10.1111/rssb.12388
+    category: fine-mapping
+    pdf: papers/wang-2020-simple-new-approach-to-variable.pdf
+    source: sources/wang-2020-simple-new-approach-to-variable.md
+    wiki: wiki/genomics/fine-mapping/wang-2020-simple-new-approach-to-variable.md
+    status: draft
+    raw_imports:
+      - https://ibg.colorado.edu/cdrom2025/4.4.FinemappingColocalization_RanCui/refs/JRSS_Wang_2020_susie.pdf
+
+  - id: visscher-2017-10-years-of-gwas-discovery
+    domain: genomics
+    title: 10 Years of GWAS Discovery, Biology, Function, and Translation
+    authors:
+      - Peter M. Visscher
+      - Naomi R. Wray
+      - Qian Zhang
+      - Pamela Sklar
+      - Mark I. McCarthy
+      - Matthew A. Brown
+      - Jian Yang
+    year: 2017
+    doi: 10.1016/j.ajhg.2017.06.005
+    category: gwas-reviews
+    pdf: papers/visscher-2017-10-years-of-gwas-discovery.pdf
+    source: sources/visscher-2017-10-years-of-gwas-discovery.md
+    wiki: wiki/genomics/gwas-reviews/visscher-2017-10-years-of-gwas-discovery.md
+    status: draft
+    raw_imports:
+      - https://gwern.net/doc/genetics/heritable/2017-visscher.pdf
+
+  - id: dalla-torre-2025-nucleotide-transformer-building-and
+    domain: genomics
+    title: Nucleotide Transformer, building and evaluating robust foundation models for human genomics
+    authors:
+      - Hugo Dalla-Torre
+      - Liam Gonzalez
+      - Javier Mendoza-Revilla
+      - Nicolas Lopez Carranza
+      - Adam Henryk Grzywaczewski
+      - Francesco Oteri
+      - Christian Dallago
+      - Evan Trop
+      - Bernardo P. de Almeida
+      - Hassan Sirelkhatim
+      - Guillaume Richard
+      - Marcin Skwark
+      - Karim Beguir
+      - Marie Lopez
+      - Thomas Pierrot
+    year: 2025
+    doi: 10.1038/s41592-024-02523-z
+    category: genomic-foundation-models
+    pdf: papers/dalla-torre-2025-nucleotide-transformer-building-and.pdf
+    source: sources/dalla-torre-2025-nucleotide-transformer-building-and.md
+    wiki: wiki/genomics/genomic-foundation-models/dalla-torre-2025-nucleotide-transformer-building-and.md
+    status: draft
+    raw_imports:
+      - https://www.nature.com/articles/s41592-024-02523-z.pdf
+
+  - id: vaswani-2017-attention-is-all-you-need
+    domain: machine-learning
+    title: Attention Is All You Need
+    authors:
+      - Ashish Vaswani
+      - Noam Shazeer
+      - Niki Parmar
+      - Jakob Uszkoreit
+      - Llion Jones
+      - Aidan N. Gomez
+      - Lukasz Kaiser
+      - Illia Polosukhin
+    year: 2017
+    doi: 10.48550/arXiv.1706.03762
+    category: transformer-language-models
+    pdf: papers/vaswani-2017-attention-is-all-you-need.pdf
+    source: sources/vaswani-2017-attention-is-all-you-need.md
+    wiki: wiki/machine-learning/transformer-language-models/vaswani-2017-attention-is-all-you-need.md
+    status: draft
+    raw_imports:
+      - https://arxiv.org/pdf/1706.03762
+
+  - id: devlin-2018-bert-pre-training-of-deep
+    domain: machine-learning
+    title: BERT, Pre-training of Deep Bidirectional Transformers for Language Understanding
+    authors:
+      - Jacob Devlin
+      - Ming-Wei Chang
+      - Kenton Lee
+      - Kristina Toutanova
+    year: 2018
+    doi: 10.48550/arXiv.1810.04805
+    category: transformer-language-models
+    pdf: papers/devlin-2018-bert-pre-training-of-deep.pdf
+    source: sources/devlin-2018-bert-pre-training-of-deep.md
+    wiki: wiki/machine-learning/transformer-language-models/devlin-2018-bert-pre-training-of-deep.md
+    status: draft
+    raw_imports:
+      - https://arxiv.org/pdf/1810.04805
+
+  - id: ji-2021-dnabert-pre-trained-bidirectional-encoder
+    domain: genomics
+    title: "DNABERT, pre-trained Bidirectional Encoder Representations from Transformers model for DNA-language in genome"
+    authors:
+      - Yanrong Ji
+      - Zhihan Zhou
+      - Han Liu
+      - Ramana V. Davuluri
+    year: 2021
+    doi: 10.1093/bioinformatics/btab083
+    category: genomic-foundation-models
+    pdf: papers/ji-2021-dnabert-pre-trained-bidirectional-encoder.pdf
+    source: sources/ji-2021-dnabert-pre-trained-bidirectional-encoder.md
+    wiki: wiki/genomics/genomic-foundation-models/ji-2021-dnabert-pre-trained-bidirectional-encoder.md
+    status: draft
+    raw_imports:
+      - papers/btab083.pdf

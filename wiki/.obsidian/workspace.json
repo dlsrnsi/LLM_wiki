@@ -11,10 +11,14 @@
             "id": "34812a9803b4954d",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "그래프 뷰"
+              "type": "markdown",
+              "state": {
+                "file": "genomics/genomic-foundation-models/dalla-torre-2025-nucleotide-transformer-building-and.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "dalla-torre-2025-nucleotide-transformer-building-and"
             }
           }
         ]
@@ -178,16 +182,28 @@
   },
   "active": "34812a9803b4954d",
   "lastOpenFiles": [
-    "main.md",
-    "drug-discovery/drug-target-interactions/lee-2022-sequence-based-prediction-of-protein.md",
+    "genomics/genomic-foundation-models/category-genomic-foundation-models.md",
+    "genomics/fine-mapping/benner-2016-finemap-efficient-variable-selection.md",
+    "genomics/fine-mapping/wang-2020-simple-new-approach-to-variable.md",
+    "genomics/fine-mapping/lee-2026-genomic-language-based-finemapping.md",
+    "drug-discovery/reviews/kim-2020-artificial-intelligence-in-drug.md",
     "drug-discovery/drug-target-interactions/lee-2019-deepconv-dti-prediction-of-drug.md",
     "drug-discovery/drug-target-interactions/lee-2018-identification-of-drug-target.md",
+    "drug-discovery/binding-sites-virtual-screening/kang-2022-ai-based-prediction-of-new.md",
+    "drug-discovery/binding-sites-virtual-screening/category-binding-sites-virtual-screening.md",
+    "drug-discovery/admet-safety/kim-2022-bayesherg-a-robust-reliable.md",
+    "genomics/gwas-reviews/visscher-2017-10-years-of-gwas-discovery.md",
+    "genomics/genomic-foundation-models/ji-2021-dnabert-pre-trained-bidirectional-encoder.md",
+    "genomics/genomic-foundation-models/dalla-torre-2025-nucleotide-transformer-building-and.md",
+    "genomics/fine-mapping/category-fine-mapping.md",
+    "drug-discovery/drug-target-interactions/category-drug-target-interactions.md",
+    "drug-discovery/drug-target-interactions/lee-2022-sequence-based-prediction-of-protein.md",
+    "main.md",
     "drug-discovery/reviews/category-reviews.md",
     "drug-discovery/drug-discovery-main.md",
     "drug-discovery/overviews/category-overviews.md",
     "drug-discovery/overviews/ai-drug-discovery-sequence-and-interaction-models.md",
     "drug-discovery/assets/deepconv-dti-figure-1.png",
-    "drug-discovery/drug-target-interactions/category-drug-target-interactions.md",
     "drug-target-interactions/category-drug-target-interactions.md",
     "drug-discovery/assets",
     "drug-discovery/other/category-other.md",
@@ -195,27 +211,16 @@
     "drug-discovery/concepts/category-concepts.md",
     "drug-discovery/concepts",
     "drug-discovery/overviews",
-    "drug-discovery/reviews/kim-2020-artificial-intelligence-in-drug.md",
     "drug-discovery/reviews",
     "drug-discovery/peptide-function/lee-2022-amp-bert-prediction-of-antimicrobial.md",
     "drug-discovery/peptide-function/category-peptide-function.md",
     "drug-discovery/peptide-function",
     "drug-discovery/drug-target-interactions",
-    "drug-discovery/binding-sites-virtual-screening/kang-2022-ai-based-prediction-of-new.md",
-    "drug-discovery/binding-sites-virtual-screening/category-binding-sites-virtual-screening.md",
     "drug-discovery/binding-sites-virtual-screening",
-    "drug-discovery/admet-safety/kim-2022-bayesherg-a-robust-reliable.md",
-    "drug-discovery/admet-safety/category-admet-safety.md",
     "drug-discovery/admet-safety",
     "drug-discovery",
-    "drug-target-interactions/lee-2019-deepconv-dti-prediction-of-drug.md",
-    "drug-target-interactions/lee-2018-identification-of-drug-target.md",
-    "binding-sites-virtual-screening/kang-2022-ai-based-prediction-of-new.md",
     "assets/deepconv-dti-figure-1.png",
     "assets/deepconv-dti-page-4.png",
-    "drug-target-interactions/lee-2022-sequence-based-prediction-of-protein.md",
-    "binding-sites-virtual-screening/category-binding-sites-virtual-screening.md",
-    "무제.canvas",
-    "reviews/kim-2020-artificial-intelligence-in-drug.md"
+    "무제.canvas"
   ]
 }

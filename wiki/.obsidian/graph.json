@@ -62,6 +62,34 @@
         "a": 1,
         "rgb": 7829367
       }
+    },
+    {
+      "query": "path:genomics/fine-mapping",
+      "color": {
+        "a": 1,
+        "rgb": 10053171
+      }
+    },
+    {
+      "query": "path:genomics/gwas-reviews",
+      "color": {
+        "a": 1,
+        "rgb": 6676582
+      }
+    },
+    {
+      "query": "path:genomics/genomic-foundation-models",
+      "color": {
+        "a": 1,
+        "rgb": 4424031
+      }
+    },
+    {
+      "query": "path:machine-learning/transformer-language-models",
+      "color": {
+        "a": 1,
+        "rgb": 13421772
+      }
     }
   ],
   "collapse-display": false,
@@ -74,6 +102,6 @@
   "repelStrength": 12.5,
   "linkStrength": 1,
   "linkDistance": 30,
-  "scale": 0.9999999999999983,
+  "scale": 0.9999999999999972,
   "close": false
 }

@@ -95,6 +95,34 @@ User-mandated rules for this project:
 8. Paper notes should support RAG extraction. Keep consistent sections for summary, materials/data, methods, results, limitations, and related papers with explicit rationale for links.
 9. `data/papers.yml` remains the canonical registry. The wiki folder is for reading, visual graph navigation, and retrieval-oriented knowledge extraction.
 
+## Paper Note Quality Standard
+
+Do not create skeletal paper notes. A new paper note should be detailed enough that a future RAG query can answer concrete questions about what data were used, what method was proposed, how it was evaluated, and what the main findings were without reopening the PDF for basic facts.
+
+Minimum density for normal research papers:
+
+- `Materials and Data`: name the datasets, sources, cohorts, compounds/proteins/variants/tasks, sample sizes, train/validation/test splits, filtering rules, assay conditions, and external validation sets when the paper reports them.
+- `Methods`: describe the actual model/algorithm/workflow, not just the high-level topic. Include architecture components, input representations, losses/objectives, priors, equations, training or inference procedure, baselines, and evaluation protocol where applicable.
+- `Results`: include concrete metrics, benchmark numbers, ablation results, external validation results, qualitative findings, and the authors' strongest empirical claims. Do not write only "the method performed well."
+- `Limitations`: record data limitations, modeling assumptions, failure modes, scope limits, and what the paper does not prove.
+- `Related Papers`: add links only for method/material/evaluation/result connections, and explain the connection in the bullet.
+
+Extra requirements by paper type:
+
+- Statistical/mathematical methods: write the core notation and equations in detail. Include likelihoods, priors, posterior quantities, optimization or search procedures, and how reported probabilities or scores are computed.
+- Deep learning papers: record input encoding, model blocks, pretraining/fine-tuning scheme, objective/loss, hyperparameters when reported, baselines, and interpretability analyses.
+- Review papers: summarize the taxonomy, data/resource families, method families, major conclusions, and recurring bottlenecks. Do not treat reviews as empty background pages.
+- Application or screening papers: capture the full experimental/computational workflow from input data to validation, including library sizes, filtering steps, hit criteria, assay setup, and hit/validation results.
+- Background/citation papers added to support another paper must still be independently useful. At minimum, explain why the citation matters, its materials/tasks, method, key results, and limitations.
+
+Quality gate before finishing an ingest:
+
+1. Re-read the PDF if any of `Materials and Data`, `Methods`, or `Results` is only one short paragraph.
+2. Prefer concrete numbers from the paper over generic summaries.
+3. If a section is genuinely not applicable, say why. Do not leave it empty.
+4. Update both `sources/{paper-id}.md` and `wiki/{domain}/{sub-domain}/{paper-id}.md` to the same evidence level; the source tier can be more extraction-like, and the wiki tier can be more readable/synthetic.
+5. Run `python tools\validate_wiki.py` after changes. Rebuild Notion payload with `python tools\build_notion_sync_payload.py` when wiki content changed.
+
 ## File Naming Convention
 
 All three tiers (PDF, source, wiki) share the same stem:
@@ -168,11 +196,16 @@ status: draft
 ## One-line Summary
 ## 1. Document Information
 ## 2. Key Contributions
-## 3. Methodology and Architecture
-## 4. Key Results and Benchmarks
-## 5. Limitations and Future Work
-## 6. Related Work
-## 7. Glossary
+## 3. Materials and Data
+## 4. Methodology and Architecture
+### Inputs and Representations
+### Model / Algorithm / Workflow
+### Training, Inference, or Search Procedure
+### Baselines and Evaluation Protocol
+## 5. Key Results and Benchmarks
+## 6. Limitations and Future Work
+## 7. Related Work
+## 8. Glossary
 ```
 
 ### Step 4 - Write `wiki/{domain}/{sub-domain}/{paper-id}.md`
@@ -198,6 +231,10 @@ tags: []
 ## Key Contributions
 ## Materials and Data
 ## Methods
+### Inputs and Representations
+### Model / Algorithm / Workflow
+### Training, Inference, or Search Procedure
+### Baselines and Evaluation Protocol
 ## Results
 ## Limitations
 ## Related Papers

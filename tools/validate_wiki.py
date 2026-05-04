@@ -48,6 +48,8 @@ def main() -> None:
                 errors.append(f"{paper_id}: missing {field} file {value}")
 
         for raw_path in raw_imports(entry):
+            if raw_path.startswith(("http://", "https://")):
+                continue
             if not Path(raw_path).exists():
                 errors.append(f"{paper_id}: missing raw import {raw_path}")
 

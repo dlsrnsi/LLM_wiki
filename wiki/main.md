@@ -3,6 +3,8 @@
 ## Domains
 
 - [[drug-discovery/drug-discovery-main|Drug discovery]]
+- [[genomics/genomics-main|Genomics]]
+- [[machine-learning/machine-learning-main|Machine learning]]
 
 ## Vault Notes
 
