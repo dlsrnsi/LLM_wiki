@@ -121,7 +121,7 @@ Quality gate before finishing an ingest:
 2. Prefer concrete numbers from the paper over generic summaries.
 3. If a section is genuinely not applicable, say why. Do not leave it empty.
 4. Update both `sources/{paper-id}.md` and `wiki/{domain}/{sub-domain}/{paper-id}.md` to the same evidence level; the source tier can be more extraction-like, and the wiki tier can be more readable/synthetic.
-5. Run `python tools\validate_wiki.py` after changes. Rebuild Notion payload with `python tools\build_notion_sync_payload.py` when wiki content changed.
+5. Run `python tools\validate_wiki.py` after changes.
 
 ## File Naming Convention
 
@@ -273,20 +273,3 @@ Over time the wiki becomes a searchable, cross-referenced knowledge graph.
 ## Browsing
 
 Use Obsidian to open the `wiki/` folder as a vault when visual navigation, backlinks, graph view, and full-text search are useful. Start from `wiki/main.md`. Obsidian reads markdown files directly and works well with `[[wikilinks]]`.
-
-## Notion Sync
-
-Notion is a publish/collaboration target for this project, not the canonical source.
-
-1. Treat `wiki/` as the source of truth for Obsidian graphing, RAG retrieval, and all paper content.
-2. Use Notion MCP for one-way sync from local markdown to Notion.
-3. Keep sync state in `data/notion-sync.yml`, including the target parent/database, Notion page IDs, and content hashes.
-4. Generate the current sync manifest with:
-
-```powershell
-python tools\build_notion_sync_payload.py
-```
-
-5. Create or update Notion pages from `data/notion-sync-payload.json`.
-6. Do not use Notion edits as upstream changes unless the user explicitly asks to import them back. If Notion content differs, prefer updating the local markdown and syncing outward again.
-7. Preserve the wiki hierarchy in Notion properties: domain, sub-domain, page type, paper id, wiki path, status, and sync hash.
