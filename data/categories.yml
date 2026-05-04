@@ -1,0 +1,33 @@
+categories:
+  drug-target-interactions:
+    description: DTI prediction models, protein sequence models for target interaction, and network-based DTI.
+    path: wiki/drug-discovery/drug-target-interactions
+    page: wiki/drug-discovery/drug-target-interactions/category-drug-target-interactions.md
+  binding-sites-virtual-screening:
+    description: Binding-region prediction, pharmacophore modeling, docking, and virtual screening.
+    path: wiki/drug-discovery/binding-sites-virtual-screening
+    page: wiki/drug-discovery/binding-sites-virtual-screening/category-binding-sites-virtual-screening.md
+  admet-safety:
+    description: Toxicity, hERG, ADMET, and safety-related prediction models.
+    path: wiki/drug-discovery/admet-safety
+    page: wiki/drug-discovery/admet-safety/category-admet-safety.md
+  peptide-function:
+    description: Antimicrobial peptide and peptide function prediction.
+    path: wiki/drug-discovery/peptide-function
+    page: wiki/drug-discovery/peptide-function/category-peptide-function.md
+  reviews:
+    description: Survey and review papers.
+    path: wiki/drug-discovery/reviews
+    page: wiki/drug-discovery/reviews/category-reviews.md
+  concepts:
+    description: Key methods, algorithms, theories, and reusable explanations.
+    path: wiki/drug-discovery/concepts
+    page: wiki/drug-discovery/concepts/category-concepts.md
+  overviews:
+    description: Synthesis pages spanning multiple papers.
+    path: wiki/drug-discovery/overviews
+    page: wiki/drug-discovery/overviews/category-overviews.md
+  other:
+    description: Cross-cutting or uncategorized papers.
+    path: wiki/drug-discovery/other
+    page: wiki/drug-discovery/other/category-other.md

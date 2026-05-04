@@ -1,0 +1,124 @@
+papers:
+  - id: kang-2022-ai-based-prediction-of-new
+    domain: drug-discovery
+    title: AI-based prediction of new binding site and virtual screening for the discovery of novel P2X3 receptor antagonists
+    authors:
+      - Koon Mook Kang
+      - Ingoo Lee
+      - Hojung Nam
+      - Yong-Chul Kim
+    year: 2022
+    doi: 10.1016/j.ejmech.2022.114556
+    category: binding-sites-virtual-screening
+    pdf: papers/kang-2022-ai-based-prediction-of-new.pdf
+    source: sources/kang-2022-ai-based-prediction-of-new.md
+    wiki: wiki/drug-discovery/binding-sites-virtual-screening/kang-2022-ai-based-prediction-of-new.md
+    status: draft
+    raw_imports:
+      - papers/My_papers/1-s2.0-S0223523422004585-main.pdf
+      - papers/My_papers/1-s2.0-S0223523422004585-main(1).pdf
+
+  - id: kim-2022-bayesherg-a-robust-reliable
+    domain: drug-discovery
+    title: BayeshERG, a robust, reliable and interpretable deep learning model for predicting hERG channel blockers
+    authors:
+      - Hyunho Kim
+      - Minsu Park
+      - Ingoo Lee
+      - Hojung Nam
+    year: 2022
+    doi: 10.1093/bib/bbac211
+    category: admet-safety
+    pdf: papers/kim-2022-bayesherg-a-robust-reliable.pdf
+    source: sources/kim-2022-bayesherg-a-robust-reliable.md
+    wiki: wiki/drug-discovery/admet-safety/kim-2022-bayesherg-a-robust-reliable.md
+    status: draft
+    raw_imports:
+      - papers/My_papers/bbac211.pdf
+
+  - id: lee-2019-deepconv-dti-prediction-of-drug
+    domain: drug-discovery
+    title: "DeepConv-DTI: Prediction of drug-target interactions via deep learning with convolution on protein sequences"
+    authors:
+      - Ingoo Lee
+      - Jongsoo Keum
+      - Hojung Nam
+    year: 2019
+    doi: 10.1371/journal.pcbi.1007129
+    category: drug-target-interactions
+    pdf: papers/lee-2019-deepconv-dti-prediction-of-drug.pdf
+    source: sources/lee-2019-deepconv-dti-prediction-of-drug.md
+    wiki: wiki/drug-discovery/drug-target-interactions/lee-2019-deepconv-dti-prediction-of-drug.md
+    status: draft
+    raw_imports:
+      - papers/My_papers/DeepConv-DTI.pdf
+
+  - id: lee-2022-amp-bert-prediction-of-antimicrobial
+    domain: drug-discovery
+    title: "AMP-BERT: Prediction of antimicrobial peptide function based on a BERT model"
+    authors:
+      - Hansol Lee
+      - Songyeon Lee
+      - Ingoo Lee
+      - Hojung Nam
+    year: 2022
+    doi: 10.1002/pro.4529
+    category: peptide-function
+    pdf: papers/lee-2022-amp-bert-prediction-of-antimicrobial.pdf
+    source: sources/lee-2022-amp-bert-prediction-of-antimicrobial.md
+    wiki: wiki/drug-discovery/peptide-function/lee-2022-amp-bert-prediction-of-antimicrobial.md
+    status: draft
+    raw_imports:
+      - papers/My_papers/Protein Science - 2022 - Lee - AMP‐BERT Prediction of antimicrobial peptide function based on a BERT model.pdf
+
+  - id: kim-2020-artificial-intelligence-in-drug
+    domain: drug-discovery
+    title: "Artificial Intelligence in Drug Discovery: A Comprehensive Review of Data-driven and Machine Learning Approaches"
+    authors:
+      - Hyunho Kim
+      - Eunyoung Kim
+      - Ingoo Lee
+      - Bongsung Bae
+      - Minsu Park
+      - Hojung Nam
+    year: 2020
+    doi: 10.1007/s12257-020-0049-y
+    category: reviews
+    pdf: papers/kim-2020-artificial-intelligence-in-drug.pdf
+    source: sources/kim-2020-artificial-intelligence-in-drug.md
+    wiki: wiki/drug-discovery/reviews/kim-2020-artificial-intelligence-in-drug.md
+    status: draft
+    raw_imports:
+      - papers/My_papers/s12257-020-0049-y.pdf
+
+  - id: lee-2018-identification-of-drug-target
+    domain: drug-discovery
+    title: Identification of drug-target interaction by a random walk with restart method on an interactome network
+    authors:
+      - Ingoo Lee
+      - Hojung Nam
+    year: 2018
+    doi: 10.1186/s12859-018-2199-x
+    category: drug-target-interactions
+    pdf: papers/lee-2018-identification-of-drug-target.pdf
+    source: sources/lee-2018-identification-of-drug-target.md
+    wiki: wiki/drug-discovery/drug-target-interactions/lee-2018-identification-of-drug-target.md
+    status: draft
+    raw_imports:
+      - papers/My_papers/s12859-018-2199-x.pdf
+
+  - id: lee-2022-sequence-based-prediction-of-protein
+    domain: drug-discovery
+    title: Sequence-based prediction of protein binding regions and drug-target interactions
+    authors:
+      - Ingoo Lee
+      - Hojung Nam
+    year: 2022
+    doi: 10.1186/s13321-022-00584-w
+    category: drug-target-interactions
+    pdf: papers/lee-2022-sequence-based-prediction-of-protein.pdf
+    source: sources/lee-2022-sequence-based-prediction-of-protein.md
+    wiki: wiki/drug-discovery/drug-target-interactions/lee-2022-sequence-based-prediction-of-protein.md
+    status: draft
+    raw_imports:
+      - papers/My_papers/s13321-022-00584-w.pdf

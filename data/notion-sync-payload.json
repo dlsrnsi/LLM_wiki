@@ -1,0 +1,298 @@
+{
+  "generated_at": "2026-05-02T08:45:12.117293+00:00",
+  "source_root": "C:\\Users\\dlsrnsi\\OneDrive\\문서\\New project\\wiki",
+  "page_count": 18,
+  "pages": [
+    {
+      "title": "ADMET and Safety",
+      "relative_path": "drug-discovery/admet-safety/category-admet-safety.md",
+      "absolute_path": "C:\\Users\\dlsrnsi\\OneDrive\\문서\\New project\\wiki\\drug-discovery\\admet-safety\\category-admet-safety.md",
+      "page_type": "category",
+      "properties": {
+        "Title": "ADMET and Safety",
+        "Page Type": "category",
+        "Domain": "drug-discovery",
+        "Sub-domain": "admet-safety",
+        "Wiki Path": "wiki/drug-discovery/admet-safety/category-admet-safety.md",
+        "Sync Hash": "3ec0353ad213e458f2a767b51c7a3d519004d4ccc7c568a156b704f8d97b792b"
+      },
+      "content": "# ADMET and Safety\n\n- [[kim-2022-bayesherg-a-robust-reliable]] - Bayesian graph deep learning for hERG blocker prediction.\n\n## Comparative Summary\n\nThis category currently has one safety-focused paper. [[kim-2022-bayesherg-a-robust-reliable]] differs from the DTI and virtual screening papers because its goal is not to find active compounds for a target, but to identify compounds likely to create hERG cardiotoxicity risk. In the drug discovery pipeline, it sits after or alongside hit identification as a safety filter.\n\nBayeshERG is methodologically close to the other deep learning papers because it uses learned molecular representations, but it adds two concerns that the activity-prediction papers treat less centrally: uncertainty calibration and substructure-level interpretability. This makes it a useful counterpart to [[drug-discovery/binding-sites-virtual-screening/kang-2022-ai-based-prediction-of-new]], where discovered hits would eventually need safety screening.\n\n## Comparison With Other Categories\n\n| Category | Representative paper | Prediction target | Practical decision |\n|---|---|---|---|\n| DTI | [[drug-discovery/drug-target-interactions/lee-2022-sequence-based-prediction-of-protein]] | Compound-target interaction and binding regions | Which target-compound pairs are plausible |\n| Virtual screening | [[drug-discovery/binding-sites-virtual-screening/kang-2022-ai-based-prediction-of-new]] | P2X3R antagonist candidates | Which compounds to test experimentally |\n| ADMET/safety | [[kim-2022-bayesherg-a-robust-reliable]] | hERG blocker probability and uncertainty | Which compounds may be cardiotoxic |\n\n## Main Takeaway\n\nBayeshERG makes the wiki less activity-only. It adds the safety side of drug discovery: a compound can look promising in screening but still be risky if hERG blockage is predicted with high confidence.\n"
+    },
+    {
+      "title": "BayeshERG: a robust, reliable and interpretable deep learning model for predicting hERG channel blockers",
+      "relative_path": "drug-discovery/admet-safety/kim-2022-bayesherg-a-robust-reliable.md",
+      "absolute_path": "C:\\Users\\dlsrnsi\\OneDrive\\문서\\New project\\wiki\\drug-discovery\\admet-safety\\kim-2022-bayesherg-a-robust-reliable.md",
+      "page_type": "paper",
+      "properties": {
+        "Title": "BayeshERG: a robust, reliable and interpretable deep learning model for predicting hERG channel blockers",
+        "Page Type": "paper",
+        "Domain": "drug-discovery",
+        "Sub-domain": "admet-safety",
+        "Wiki Path": "wiki/drug-discovery/admet-safety/kim-2022-bayesherg-a-robust-reliable.md",
+        "Sync Hash": "4ede1c407d511312a684d79cbaa0234f3237ffc1a55d80376a4ff4b3d5ba57dc",
+        "Paper ID": "kim-2022-bayesherg-a-robust-reliable",
+        "Year": 2022,
+        "Status": "draft"
+      },
+      "content": "## Summary\n\nBayeshERG targets a practical safety problem: small molecules can unintentionally block the hERG ion channel, causing cardiotoxicity risk. The paper proposes a graph-based Bayesian deep learning model for predicting hERG channel blockers with attention to reliability and interpretability.\n\n## Key Contributions\n\n- Treats uncertainty and interpretability as first-class requirements for hERG prediction.\n- Uses molecular graph deep learning rather than only descriptor-based modeling.\n- Positions reliability as necessary for safety screening, not just a secondary metric.\n\n## Materials and Data\n\n- Pretraining data: 304,045 molecules with hERG inhibition percentage at 10 uM.\n- Fine-tuning data: 14,322 molecules, 8,488 positives and 5,834 negatives.\n- External test set 1: 30 positives and 14 negatives from Ryu et al.\n- External test set 2: FDA-approved drugs from Siramshetty et al., tested under 1 uM and 10 uM thresholds.\n- Experimental validation: KCB library, about 130,000 compounds, followed by automated hERG patch-clamp assays in HEK cells.\n\n## Methods\n\nBayeshERG encodes molecular graphs with D-MPNN, pools atom-level information with global multihead attentive pooling, and predicts hERG blockage with an MLP. MC-dropout turns the model into an approximate Bayesian neural network at inference time: multiple stochastic passes produce a mean prediction and an uncertainty estimate.\n\nTraining uses transfer learning. The model first learns from a large inhibition-percentage pretraining set, then transfers D-MPNN and GMHAP parameters into the binary blocker/nonblocker fine-tuning task.\n\n## Results\n\nBayeshERG improved both prediction and calibration compared with internal ablations. The transferred proposed model had ECE 0.064 on Test-all and 0.096 on Test-rev, and MCE 0.118 and 0.186. On external test set 1, it was balanced between positives and negatives; the paper highlights SEN 0.833 and SPE 0.857 against DL baselines.\n\nThe interpretability analysis found that locally focused attention heads were enriched in positive hERG blocker predictions, while globally focused heads were enriched in negatives. In the prospective validation, 12 high-score and structurally distinct KCB compounds were tested by patch clamp; one strong blocker and three moderate blockers were confirmed.\n\n## Limitations\n\nBayeshERG is focused on hERG blockage, so it does not cover the full ADMET space. Its prospective validation tested a small selected set of compounds, and deployment still requires careful interpretation of uncertainty and assay context.\n\n## Related Papers\n\nNo direct paper-to-paper method/result link is recorded yet. This page is currently connected at the category and overview levels as the safety counterpart to activity-focused discovery papers.\n"
+    },
+    {
+      "title": "Binding Sites and Virtual Screening",
+      "relative_path": "drug-discovery/binding-sites-virtual-screening/category-binding-sites-virtual-screening.md",
+      "absolute_path": "C:\\Users\\dlsrnsi\\OneDrive\\문서\\New project\\wiki\\drug-discovery\\binding-sites-virtual-screening\\category-binding-sites-virtual-screening.md",
+      "page_type": "category",
+      "properties": {
+        "Title": "Binding Sites and Virtual Screening",
+        "Page Type": "category",
+        "Domain": "drug-discovery",
+        "Sub-domain": "binding-sites-virtual-screening",
+        "Wiki Path": "wiki/drug-discovery/binding-sites-virtual-screening/category-binding-sites-virtual-screening.md",
+        "Sync Hash": "c2f718cbbbcb50aca427d20c0cb8ccf600cccdec856166df0479c69288279dc0"
+      },
+      "content": "# Binding Sites and Virtual Screening\n\n- [[kang-2022-ai-based-prediction-of-new]] - HoTS-guided binding-site prediction and virtual screening for P2X3 receptor antagonists.\n\n## Comparative Summary\n\nThis category currently contains one paper, but it is the strongest bridge from model development to drug discovery action. [[kang-2022-ai-based-prediction-of-new]] takes the HoTS model from [[drug-discovery/drug-target-interactions/lee-2022-sequence-based-prediction-of-protein]] and uses its predicted binding regions to propose a novel P2X3R binding cavity. The paper then converts that cavity into a pharmacophore and docking workflow, selects compounds, and validates hits experimentally.\n\nCompared with the DTI-only papers, this work is more translational. It does not stop at ranking drug-target pairs. It asks whether a model-predicted binding region can support virtual screening and wet-lab hit discovery. Compared with [[drug-discovery/admet-safety/kim-2022-bayesherg-a-robust-reliable]], it targets activity discovery rather than safety filtering.\n\n## Position in the Pipeline\n\n| Stage | Related paper | Role |\n|---|---|---|\n| Binding-region prediction | [[drug-discovery/drug-target-interactions/lee-2022-sequence-based-prediction-of-protein]] | Provides HoTS binding-region and DTI model |\n| Virtual screening | [[kang-2022-ai-based-prediction-of-new]] | Uses HoTS, pharmacophore Q12, and LibDock to select compounds |\n| Experimental validation | [[kang-2022-ai-based-prediction-of-new]] | Tests selected compounds in hP2X3R HEK293 calcium assay |\n| Safety filtering | [[drug-discovery/admet-safety/kim-2022-bayesherg-a-robust-reliable]] | Complementary downstream safety model, not used in this P2X3R paper |\n\n## Main Takeaway\n\nThe P2X3R paper is the clearest example in this wiki of an AI model becoming a screening hypothesis: predicted binding regions become a cavity, the cavity becomes a pharmacophore, and the pharmacophore plus HoTS ranking leads to experimentally measured hits.\n"
+    },
+    {
+      "title": "AI-based prediction of new binding site and virtual screening for the discovery of novel P2X3 receptor antagonists",
+      "relative_path": "drug-discovery/binding-sites-virtual-screening/kang-2022-ai-based-prediction-of-new.md",
+      "absolute_path": "C:\\Users\\dlsrnsi\\OneDrive\\문서\\New project\\wiki\\drug-discovery\\binding-sites-virtual-screening\\kang-2022-ai-based-prediction-of-new.md",
+      "page_type": "paper",
+      "properties": {
+        "Title": "AI-based prediction of new binding site and virtual screening for the discovery of novel P2X3 receptor antagonists",
+        "Page Type": "paper",
+        "Domain": "drug-discovery",
+        "Sub-domain": "binding-sites-virtual-screening",
+        "Wiki Path": "wiki/drug-discovery/binding-sites-virtual-screening/kang-2022-ai-based-prediction-of-new.md",
+        "Sync Hash": "be7c38d0956f7d0f9d54252736f74167102df1ef658a91b189c857f7c9f0d4ba",
+        "Paper ID": "kang-2022-ai-based-prediction-of-new",
+        "Year": 2022,
+        "Status": "draft"
+      },
+      "content": "## Summary\n\nThis paper is a prospective-style application of AI-guided binding-site prediction to drug discovery. It uses HoTS to identify candidate binding regions on P2X3R, converts those regions into a putative binding site, builds pharmacophore queries, screens compounds, and tests selected compounds experimentally.\n\n## Key Contributions\n\n- Connects sequence-based interpretability to structure-based screening.\n- Uses HoTS binding-region predictions to guide P2X3R cavity and pharmacophore design.\n- Compares HoTS interaction prediction with pharmacophore and docking-based screening logic.\n- Provides a concrete example of an AI model feeding a hit-identification workflow.\n\n## Materials and Data\n\n- Target sequence: P2X3_HUMAN, UniProt P56373.\n- Structures: hP2X3R AF-219/Gefapixant-bound and ATP-bound structures from PDB.\n- Library: 150,023 compounds from Korea Chemical Bank.\n- Known antagonist set: 18 hP2X3R antagonists for HoTS model selection and binding-region prediction.\n- Assay: Fluo-4 calcium influx assay in hP2X3R-expressing HEK293 cells.\n\n## Methods\n\nHoTS was used to predict binding regions on P2X3R. The model suggested three clusters: a known antagonist-site cluster, an ion-channel vestibule/gate cluster, and a novel intersubunit cavity between the head and upper-body domains. The novel cavity was evaluated by short MD simulations of closed/open receptor states, then used for CDOCKER docking of BLU-5937 derivatives.\n\nBLU-2's predicted receptor-ligand interactions seeded pharmacophore generation. Eleven features were generated, twenty pharmacophore queries were tested, and Q12 was chosen using enrichment factor, ROC AUC, and FitValue behavior against 16 active BLU compounds and 800 DUD-E decoys.\n\nTwo screening branches were run: a Q12 pharmacophore plus LibDock cascade, and a HoTS-DTI ranking over KCB using Morgan fingerprints paired with the P2X3 sequence.\n\n## Results\n\nThe pharmacophore branch filtered 150,023 KCB compounds to 97,301 by molecular properties, selected 2,346 compounds by Q12 FitValue above 3.2, and sent the top 500 after LibDock rescoring to biological testing. The HoTS branch independently selected 500 compounds from all 150,023 KCB compounds.\n\nThe two branches produced 16 total hits: 10 HoTS hits and 6 Pharmacophore-LibDock hits. HoTS-1, HoTS-2, and HoTS-4 shared a 2-chloro-6-morpholinopurinone core and had IC50 values of 3.07-8.72 uM. The authors report roughly a 10-fold higher hit ratio than prior random KCB screening.\n\nDocking analysis supported the novel-site hypothesis: all hits had -CDOCKER interaction energy above 40 kcal/mol, with HoTS-3, HoTS-9, and PD-1 above 60 kcal/mol. Lys113 and Asp76 were frequent polar interaction residues, while Lys65 contributed nonpolar interactions.\n\n## Limitations\n\nThe screening workflow is target-specific and depends on the reliability of HoTS-predicted binding regions, docking assumptions, pharmacophore query design, and the KCB compound library. The hits are early antagonists and require follow-up optimization and broader selectivity/safety validation.\n\n## Related Papers\n\n- [[drug-discovery/drug-target-interactions/lee-2022-sequence-based-prediction-of-protein]] - Method connection: this paper uses HoTS binding-region/DTI outputs as the starting point for P2X3R cavity selection and virtual screening.\n"
+    },
+    {
+      "title": "Concepts",
+      "relative_path": "drug-discovery/concepts/category-concepts.md",
+      "absolute_path": "C:\\Users\\dlsrnsi\\OneDrive\\문서\\New project\\wiki\\drug-discovery\\concepts\\category-concepts.md",
+      "page_type": "category",
+      "properties": {
+        "Title": "Concepts",
+        "Page Type": "category",
+        "Domain": "drug-discovery",
+        "Sub-domain": "concepts",
+        "Wiki Path": "wiki/drug-discovery/concepts/category-concepts.md",
+        "Sync Hash": "abb11d01c119ca6720b43a8afdc65cee87ed356c5787f6ac6b6b61f577ae92f2"
+      },
+      "content": "# Concepts\n\nReusable concept pages go here.\n\n## Comparative Summary\n\nNo standalone concept pages have been written yet. Based on the current papers, the highest-value concept pages would compare recurring methods across categories:\n\n- Random walk with restart\n- Morgan/circular fingerprints\n- Protein sequence convolution\n- Transformer attention for biological sequences\n- Binding-region prediction\n- Pharmacophore screening\n- hERG safety prediction and uncertainty calibration\n\nThese concept pages would make the graph more useful because they would connect papers that use similar methods in different drug discovery stages.\n"
+    },
+    {
+      "title": "Drug Discovery",
+      "relative_path": "drug-discovery/drug-discovery-main.md",
+      "absolute_path": "C:\\Users\\dlsrnsi\\OneDrive\\문서\\New project\\wiki\\drug-discovery\\drug-discovery-main.md",
+      "page_type": "domain-main",
+      "properties": {
+        "Title": "Drug Discovery",
+        "Page Type": "domain-main",
+        "Domain": "drug-discovery",
+        "Sub-domain": "",
+        "Wiki Path": "wiki/drug-discovery/drug-discovery-main.md",
+        "Sync Hash": "0e9d980927aada30e48800353a71cd68cc254f72afe2b8cc905df66a89f8a3b0"
+      },
+      "content": "# Drug Discovery\n\n## Categories\n\n- [[drug-discovery/drug-target-interactions/category-drug-target-interactions|Drug-target interactions]]\n- [[drug-discovery/binding-sites-virtual-screening/category-binding-sites-virtual-screening|Binding sites and virtual screening]]\n- [[drug-discovery/admet-safety/category-admet-safety|ADMET and safety]]\n- [[drug-discovery/peptide-function/category-peptide-function|Peptide function]]\n- [[drug-discovery/reviews/category-reviews|Reviews]]\n- [[drug-discovery/overviews/category-overviews|Overviews]]\n"
+    },
+    {
+      "title": "Drug-Target Interactions",
+      "relative_path": "drug-discovery/drug-target-interactions/category-drug-target-interactions.md",
+      "absolute_path": "C:\\Users\\dlsrnsi\\OneDrive\\문서\\New project\\wiki\\drug-discovery\\drug-target-interactions\\category-drug-target-interactions.md",
+      "page_type": "category",
+      "properties": {
+        "Title": "Drug-Target Interactions",
+        "Page Type": "category",
+        "Domain": "drug-discovery",
+        "Sub-domain": "drug-target-interactions",
+        "Wiki Path": "wiki/drug-discovery/drug-target-interactions/category-drug-target-interactions.md",
+        "Sync Hash": "836692a031796ac39f97d0fbb515acca82f3e7d35b103b97f7340eb4d7bbfbb6"
+      },
+      "content": "# Drug-Target Interactions\n\n- [[lee-2018-identification-of-drug-target]] - Random walk with restart on an interactome network for DTI prediction.\n- [[lee-2019-deepconv-dti-prediction-of-drug]] - CNN model over raw protein sequences for DTI prediction.\n- [[lee-2022-sequence-based-prediction-of-protein]] - HoTS model for binding-region and DTI prediction.\n\n## Comparative Summary\n\nThese three papers form the main methodological progression in the current drug discovery wiki. [[lee-2018-identification-of-drug-target]] starts from graph topology: it uses PPI/DDI networks and random walk with restart to make hand-crafted drug/protein features topology-aware. [[lee-2019-deepconv-dti-prediction-of-drug]] shifts the representation problem to deep learning by replacing protein descriptors with CNN-learned local sequence motifs. [[lee-2022-sequence-based-prediction-of-protein]] extends that sequence-modeling line by explicitly training binding-region prediction before DTI prediction.\n\nThe key difference is what each model treats as the important evidence. The 2018 RWR model trusts network neighborhood structure. DeepConv-DTI trusts local sequence motifs discovered by convolution. HoTS trusts binding-region supervision and transformer attention over protein grids. As a result, HoTS is the most directly connected to downstream virtual screening because it can suggest where a compound may bind, not just whether a DTI exists.\n\n## Comparison Table\n\n| Paper | Main input | Core method | Output | Best use |\n|---|---|---|---|---|\n| [[lee-2018-identification-of-drug-target]] | Drug/protein descriptors plus PPI/DDI topology | RWR-weighted features + cubic kNN | DTI score | Network-informed DTI prediction, including new drugs/targets with features |\n| [[lee-2019-deepconv-dti-prediction-of-drug]] | Raw protein sequence + Morgan fingerprints | CNN motif extraction + dense DTI classifier | DTI probability | Broad sequence-based DTI prediction across protein classes |\n| [[lee-2022-sequence-based-prediction-of-protein]] | Protein sequence grids + compound fingerprints | BR pretraining + transformer attention | Binding regions and DTI probability | Interpretable DTI prediction and screening handoff |\n\n## Links Across Categories\n\n- [[drug-discovery/binding-sites-virtual-screening/kang-2022-ai-based-prediction-of-new]] applies HoTS to P2X3R hit discovery.\n- [[drug-discovery/reviews/kim-2020-artificial-intelligence-in-drug]] provides the broader drug discovery pipeline context.\n"
+    },
+    {
+      "title": "Identification of drug-target interaction by a random walk with restart method on an interactome network",
+      "relative_path": "drug-discovery/drug-target-interactions/lee-2018-identification-of-drug-target.md",
+      "absolute_path": "C:\\Users\\dlsrnsi\\OneDrive\\문서\\New project\\wiki\\drug-discovery\\drug-target-interactions\\lee-2018-identification-of-drug-target.md",
+      "page_type": "paper",
+      "properties": {
+        "Title": "Identification of drug-target interaction by a random walk with restart method on an interactome network",
+        "Page Type": "paper",
+        "Domain": "drug-discovery",
+        "Sub-domain": "drug-target-interactions",
+        "Wiki Path": "wiki/drug-discovery/drug-target-interactions/lee-2018-identification-of-drug-target.md",
+        "Sync Hash": "2127b15df96b262a2bda8624f114a33a52bb94bb7ea2cc64bca8c647708ad217",
+        "Paper ID": "lee-2018-identification-of-drug-target",
+        "Year": 2018,
+        "Status": "draft"
+      },
+      "content": "## Summary\n\nThis paper predicts drug-target interactions using global topology from an interactome network. Random walk with restart lets the model use information beyond immediate network neighbors.\n\n## Key Contributions\n\n- Moves beyond direct guilt-by-association features.\n- Uses random walk with restart for topology-weighted features.\n- Reports improved prediction performance compared with unweighted or direct-neighbor approaches.\n\n## Materials and Data\n\nThe model uses three networks: a HIPPIE PPI network with 14,086 proteins and 153,749 PPIs; a DrugBank-derived DDI network with 3,609 drugs and 77,713 edges between drugs sharing targets; and 8,838 DrugBank DTIs as positives. The independent PubChem test set contains 6,533 positives and 6,892 negatives.\n\nDrug features are 1,024-bit PaDEL fingerprints. Protein features are 1,287 sequence-derived descriptors. Each DTI is represented by concatenating weighted drug and protein vectors.\n\n## Methods\n\nRandom walk with restart runs separately on the drug-drug and protein-protein networks. For each seed node, RWR produces affinity scores to graph-near nodes. These scores weight the feature vectors, creating topology-aware features that include direct and indirect neighbors while preserving the seed node according to restart probability. Weighted drug and protein vectors are concatenated into a 2,311-dimensional DTI vector and classified with cubic kNN.\n\n## Results\n\nThe best restart probability was c = 0.25. RWR weighting made drugs sharing targets more similar in feature space; in the AURKA example, average Euclidean distance among three AURKA-binding drugs decreased from 0.4271 to 0.1580 after weighting.\n\nOn the independent PubChem test, the method reached AUC 0.675 +/- 0.018 versus 0.628 +/- 0.026 for a guilt-by-association baseline, with paired t-test p = 6.17e-6. On a restricted seen-drug/seen-target comparison, NRWRH slightly outperformed this method, but this method retains the advantage of feature-based prediction for drugs or targets not seen in training.\n\nQualitatively, the model recovered many kinase inhibitor-kinase interactions. For pazopanib, it correctly predicted 168 of 169 positive DTI pairs with scores above 0.8.\n\n## Limitations\n\nThe method depends on the coverage and reliability of PPI/DDI networks. It also requires hand-crafted drug and protein features, and its independent-test performance remains modest compared with later sequence-learning approaches.\n\n## Related Papers\n\n- [[lee-2019-deepconv-dti-prediction-of-drug]] - Method connection: both predict DTIs, but this paper uses topology-weighted hand-crafted features while DeepConv-DTI replaces protein descriptors with CNN-learned sequence motifs.\n- [[lee-2022-sequence-based-prediction-of-protein]] - Method/result connection: HoTS extends the DTI prediction line by adding explicit binding-region supervision and reports stronger DTI evaluation.\n"
+    },
+    {
+      "title": "DeepConv-DTI: Prediction of drug-target interactions via deep learning with convolution on protein sequences",
+      "relative_path": "drug-discovery/drug-target-interactions/lee-2019-deepconv-dti-prediction-of-drug.md",
+      "absolute_path": "C:\\Users\\dlsrnsi\\OneDrive\\문서\\New project\\wiki\\drug-discovery\\drug-target-interactions\\lee-2019-deepconv-dti-prediction-of-drug.md",
+      "page_type": "paper",
+      "properties": {
+        "Title": "DeepConv-DTI: Prediction of drug-target interactions via deep learning with convolution on protein sequences",
+        "Page Type": "paper",
+        "Domain": "drug-discovery",
+        "Sub-domain": "drug-target-interactions",
+        "Wiki Path": "wiki/drug-discovery/drug-target-interactions/lee-2019-deepconv-dti-prediction-of-drug.md",
+        "Sync Hash": "7515a3e2affaf92129070e377d2c1de8cf16cf9a6ca748981287b2b7df5e2733",
+        "Paper ID": "lee-2019-deepconv-dti-prediction-of-drug",
+        "Year": 2019,
+        "Status": "draft"
+      },
+      "content": "## Summary\n\nDeepConv-DTI predicts drug-target interactions by learning local residue patterns directly from raw protein sequences. It is an important step from hand-crafted protein descriptors toward learned sequence representations in DTI prediction.\n\n## Overview Figure\n\n![[drug-discovery/assets/deepconv-dti-figure-1.png]]\n\nFigure 1 summarizes the full DeepConv-DTI workflow: training DTI dataset generation from DrugBank, KEGG, and IUPHAR; CNN-based protein sequence modeling with drug fingerprints; hyperparameter optimization using MATADOR and predicted negative DTIs; and independent DTI prediction using PubChem BioAssay and KinaseSARfari.\n\n## Key Contributions\n\n- Applies CNNs to protein sequences for DTI prediction.\n- Captures local amino-acid subsequence patterns with convolution filters.\n- Reports better performance than previous descriptor-based and deep learning DTI models.\n- Shows that pooled convolution outputs can reveal binding-site-related protein regions.\n\n## Materials and Data\n\nTraining DTIs came from DrugBank, KEGG, and IUPHAR, producing 11,950 compounds, 3,675 proteins, and 32,568 positive DTIs after identifier cleanup. Ten negative DTI sets were randomly generated. Hyperparameters were tuned on MATADOR positives plus credible negatives. Independent tests used PubChem BioAssay and KinaseSARfari.\n\n## Methods\n\nDrugs are represented as 2,048-bit Morgan fingerprints. Proteins are represented by raw amino acid sequences padded to length 2,500. A trainable embedding layer converts residues to vectors, then 1D CNN filters scan local residue windows. Global max-pooling takes the strongest signal for each filter, which lets the model find motifs regardless of position. Drug and protein representations are concatenated for binary DTI prediction.\n\nRegularization includes L2 penalty, spatial dropout on the embedding layer, and batch normalization. Hyperparameters were selected by external validation, yielding AUPR 0.832 and AUC 0.852.\n\n## Results\n\nDeepConv-DTI outperformed CTD and Smith-Waterman protein descriptors on independent PubChem datasets, including new-compound, new-target, and new-DTI subsets. It also outperformed MFDR, DeepDTI, DeepDTA, and DL-CPI under common DTI train/test comparisons.\n\nFor interpretability, pooled convolution outputs were compared with 7,179 sc-PDB Vertebrata entries. Random null distributions were generated 10,000 times per entry. Binding-site coverage by convolution results was significant for 14.6%, 30.3%, and 42.2% of entries at the 1%, 5%, and 10% levels. Learned protein features for 1,527 training proteins also roughly separated GPCRs, nuclear receptors, ion channels, kinases, and proteases in t-SNE.\n\n## Limitations\n\nDeepConv-DTI learns from sequence and fingerprints but does not explicitly train on binding-region labels. Its binding-site interpretation comes from post-hoc convolution activation analysis, which is less direct than later binding-region-supervised models.\n\n## Related Papers\n\n- [[lee-2022-sequence-based-prediction-of-protein]] - Method/result connection: HoTS reuses sequence motif extraction ideas but adds binding-region pretraining and reports improved DTI performance.\n- [[lee-2018-identification-of-drug-target]] - Method connection: both are DTI predictors, but DeepConv-DTI replaces topology-weighted descriptors with CNN sequence features.\n"
+    },
+    {
+      "title": "Sequence-based prediction of protein binding regions and drug-target interactions",
+      "relative_path": "drug-discovery/drug-target-interactions/lee-2022-sequence-based-prediction-of-protein.md",
+      "absolute_path": "C:\\Users\\dlsrnsi\\OneDrive\\문서\\New project\\wiki\\drug-discovery\\drug-target-interactions\\lee-2022-sequence-based-prediction-of-protein.md",
+      "page_type": "paper",
+      "properties": {
+        "Title": "Sequence-based prediction of protein binding regions and drug-target interactions",
+        "Page Type": "paper",
+        "Domain": "drug-discovery",
+        "Sub-domain": "drug-target-interactions",
+        "Wiki Path": "wiki/drug-discovery/drug-target-interactions/lee-2022-sequence-based-prediction-of-protein.md",
+        "Sync Hash": "1b947646375431568c97e3972d661c387d2cc24dbd3b7ec832a28522d2d5abd5",
+        "Paper ID": "lee-2022-sequence-based-prediction-of-protein",
+        "Year": 2022,
+        "Status": "draft"
+      },
+      "content": "## Summary\n\nHoTS predicts both binding regions and drug-target interactions from protein sequences and ligands. The core idea is that learning to identify binding regions improves DTI prediction and makes the model more interpretable.\n\n## Key Contributions\n\n- Adds binding-region prediction as an explicit training objective.\n- Uses transformer-based modeling and object detection for sequence-region prediction.\n- Reports improved DTI performance after binding-region pretraining.\n- Provides interpretable attention to protein regions relevant to ligand binding.\n\n## Materials and Data\n\nBR training used scPDB v2017 and PDBBind v2018, producing 23,278 complexes and 6,143 proteins. BR tests used COACH and HOLO4K after removing overlapping complexes. DTI training used DrugBank, KEGG, and IUPHAR: 12,814 compounds, 3,789 proteins, 36,152 positives, and 72,304 generated negatives. PubChem BioAssay provided independent DTI tests.\n\n## Methods\n\nHoTS maps binding information from 3D complexes onto UniProt sequences, expands binding-site residues into sequence binding regions, and trains a sequence-level object-detection task. Protein sequences are encoded by CNN motif extraction, pooled into grids, and processed with transformer blocks together with a compound token derived from Morgan fingerprints. The BR head predicts center, width, and confidence; the DTI head uses the compound token to predict interaction probability.\n\nTraining happens in two phases: BR pretraining first, then DTI fine-tuning with alternating BR and DTI updates. Focal loss handles the class imbalance of sparse binding regions.\n\n## Results\n\nBR validation AP reached 62.28%, while DTI validation reached AUROC 0.8542 and AUPR 0.8232. On COACH, HoTS achieved top-(n+2) BR success of 85.26 +/- 0.8% for unseen complexes and 81.4 +/- 0.9% for unseen proteins. On HOLO4K, top-(n+2) success was 79.1 +/- 0.4% and 71.7 +/- 0.6%, respectively.\n\nFor DTI prediction, HoTS with BR pretraining outperformed MONN, DeepConv-DTI, TransformerCPI, and HoTS without BR pretraining on PubChem test sets. The advantage was strongest on proteins sharing SCOPe-family motifs with the BR training set.\n\nAttention analysis supported the mechanism: compound-token attention was higher on BR grids than non-BR grids, with KS-test p-values below 1e-53 on COACH and below 1e-100 on HOLO4K.\n\n## Limitations\n\nHoTS still uses Morgan/circular fingerprints for compounds and does not model full 3D conformational context at prediction time. It also predicts interaction likelihood and binding regions, not drug action type such as agonism or antagonism.\n\n## Related Papers\n\n- [[lee-2019-deepconv-dti-prediction-of-drug]] - Method connection: HoTS builds on sequence motif extraction but adds transformer attention and supervised binding-region prediction.\n- [[drug-discovery/binding-sites-virtual-screening/kang-2022-ai-based-prediction-of-new]] - Method/result connection: the P2X3R paper uses HoTS binding-region and DTI predictions to define a binding cavity and select compounds for experimental screening.\n"
+    },
+    {
+      "title": "Other",
+      "relative_path": "drug-discovery/other/category-other.md",
+      "absolute_path": "C:\\Users\\dlsrnsi\\OneDrive\\문서\\New project\\wiki\\drug-discovery\\other\\category-other.md",
+      "page_type": "category",
+      "properties": {
+        "Title": "Other",
+        "Page Type": "category",
+        "Domain": "drug-discovery",
+        "Sub-domain": "other",
+        "Wiki Path": "wiki/drug-discovery/other/category-other.md",
+        "Sync Hash": "d06b0fbf788872e5e06d3db5ed2e5e408f9d52dfcdac6f5c6ee4001bdc4ecb87"
+      },
+      "content": "# Other\n\nCross-cutting or uncategorized paper pages go here.\n\n## Comparative Summary\n\nNo papers are currently assigned to `other`. Keep this category as a temporary holding area only. If a future paper has a clear role in drug discovery, prefer assigning it to a specific folder such as `drug-target-interactions`, `binding-sites-virtual-screening`, `admet-safety`, `peptide-function`, or `reviews`.\n"
+    },
+    {
+      "title": "AI Drug Discovery Sequence and Interaction Models",
+      "relative_path": "drug-discovery/overviews/ai-drug-discovery-sequence-and-interaction-models.md",
+      "absolute_path": "C:\\Users\\dlsrnsi\\OneDrive\\문서\\New project\\wiki\\drug-discovery\\overviews\\ai-drug-discovery-sequence-and-interaction-models.md",
+      "page_type": "overview",
+      "properties": {
+        "Title": "AI Drug Discovery Sequence and Interaction Models",
+        "Page Type": "overview",
+        "Domain": "drug-discovery",
+        "Sub-domain": "overviews",
+        "Wiki Path": "wiki/drug-discovery/overviews/ai-drug-discovery-sequence-and-interaction-models.md",
+        "Sync Hash": "977771969664450c63c271bc3a8f31447d7b1e3fa559e14ab19fb6ba4428f121"
+      },
+      "content": "# AI Drug Discovery Sequence and Interaction Models\n\n## Scope\n\nThis overview covers the first seven papers added to the wiki. The current collection centers on AI for drug discovery, with a strong thread through drug-target interaction prediction, binding-region interpretability, virtual screening, peptide function prediction, and safety prediction.\n\n## Main Pattern\n\nThe collection shows a progression from network-based DTI prediction to sequence-based deep learning, then to explicitly interpretable binding-region models and downstream screening workflows.\n\n1. [[drug-discovery/drug-target-interactions/lee-2018-identification-of-drug-target]] uses random walk with restart on HIPPIE/DrugBank-derived PPI and DDI networks to make topology-weighted DTI features. It improves independent-test AUC over a guilt-by-association baseline.\n2. [[drug-discovery/drug-target-interactions/lee-2019-deepconv-dti-prediction-of-drug]] moves toward raw protein sequence modeling with CNNs. It trains on DrugBank/KEGG/IUPHAR DTIs and tests on PubChem and KinaseSARfari.\n3. [[drug-discovery/drug-target-interactions/lee-2022-sequence-based-prediction-of-protein]] adds binding-region prediction through HoTS. It pretrains on scPDB/PDBBind binding regions, then fine-tunes DTI prediction on DrugBank/KEGG/IUPHAR.\n4. [[drug-discovery/binding-sites-virtual-screening/kang-2022-ai-based-prediction-of-new]] applies HoTS to P2X3R binding-site discovery and virtual screening. It turns sequence-model output into a pharmacophore/docking hypothesis and validates hits experimentally.\n\n## Data and Evaluation Thread\n\n- Network DTI: HIPPIE PPI, DrugBank DDI/DTI, PubChem independent test.\n- Sequence DTI: DrugBank, KEGG, IUPHAR, MATADOR validation, PubChem/KinaseSARfari tests.\n- Binding-region DTI: scPDB/PDBBind BR pretraining, COACH/HOLO4K BR tests, PubChem DTI tests.\n- Virtual screening: KCB library, HoTS-DTI ranking, Q12 pharmacophore screening, LibDock, HEK293 P2X3R calcium assay.\n\nThe collection is useful because the evaluation surface gets progressively more realistic: from network and assay benchmark tests, to explicit binding-region validation, to prospective-like compound screening.\n\n## Adjacent Model Families\n\n[[drug-discovery/peptide-function/lee-2022-amp-bert-prediction-of-antimicrobial]] applies transformer modeling to antimicrobial peptide classification. It is not a DTI model, but it shares the same sequence-learning theme: biological sequences can be treated as structured inputs for deep learning, and attention can be used for interpretation.\n\n[[drug-discovery/admet-safety/kim-2022-bayesherg-a-robust-reliable]] covers safety prediction through hERG blocker classification. It broadens the collection from activity prediction to risk prediction, emphasizing uncertainty and interpretability.\n\nAMP-BERT and BayeshERG also show two different meanings of interpretability:\n\n- AMP-BERT uses residue-level attention to recover structural motifs such as disulfide-bond cysteines, alpha-helices, and beta-strands.\n- BayeshERG uses graph attention and Bayesian uncertainty to identify substructure-level signals and quantify reliability for safety decisions.\n\n## Main Results Snapshot\n\n- RWR-DTI: independent PubChem AUC 0.675 +/- 0.018 versus 0.628 +/- 0.026 for guilt-by-association.\n- DeepConv-DTI: external validation AUPR 0.832 and AUC 0.852; sc-PDB binding-site enrichment significant for 30.3% of entries at 5% cutoff.\n- HoTS: BR validation AP 62.28%; COACH top-(n+2) BR success 85.26 +/- 0.8%; DTI validation AUROC 0.8542 and AUPR 0.8232.\n- P2X3R screening: 16 hits from two sets of 500 screened compounds, including low micromolar P2X3R antagonists.\n- AMP-BERT: external test ACC 0.7604, F1 0.7917, AUROC 0.8183, AUPR 0.7866.\n- BayeshERG: external-test balanced performance, ECE 0.064 on Test-all, patch-clamp validation found one strong and three moderate hERG blockers among 12 tested KCB compounds.\n\n## Review Anchor\n\n[[drug-discovery/reviews/kim-2020-artificial-intelligence-in-drug]] provides the broad map: target identification, hit identification, ADMET prediction, lead optimization, and drug repositioning. The other papers can be placed inside that pipeline:\n\n- DTI papers support target and interaction prediction.\n- The P2X3R screening paper supports hit identification.\n- BayeshERG supports ADMET and safety filtering.\n- AMP-BERT supports peptide-based discovery.\n\n## Open Questions for the Wiki\n\n- How do sequence-only models compare with structure-aware models on the same targets?\n- When does interpretability improve practical screening decisions rather than only post-hoc explanation?\n- Which model outputs are actionable enough to drive wet-lab validation?\n- How should uncertainty be represented in hit selection and safety filtering?\n"
+    },
+    {
+      "title": "Overviews",
+      "relative_path": "drug-discovery/overviews/category-overviews.md",
+      "absolute_path": "C:\\Users\\dlsrnsi\\OneDrive\\문서\\New project\\wiki\\drug-discovery\\overviews\\category-overviews.md",
+      "page_type": "category",
+      "properties": {
+        "Title": "Overviews",
+        "Page Type": "category",
+        "Domain": "drug-discovery",
+        "Sub-domain": "overviews",
+        "Wiki Path": "wiki/drug-discovery/overviews/category-overviews.md",
+        "Sync Hash": "2b05d5075dcf5e3f74e2ce58c8c2852c5e0636e4e69a125c2b5571c6b0b93ffd"
+      },
+      "content": "# Overviews\n\nSynthesis pages across multiple papers go here.\n\n## Current Overviews\n\n- [[ai-drug-discovery-sequence-and-interaction-models]] - Cross-paper synthesis of the first seven drug discovery papers.\n\n## Comparative Summary\n\nThe overview layer is where individual paper notes become a connected research map. The current overview compares model families across the wiki: network-based DTI, CNN sequence DTI, binding-region-aware transformers, virtual screening, AMP classification, hERG safety, and broad review context.\n\nCompared with category pages, overview pages should answer cross-cutting questions:\n\n- How do model inputs evolve from hand-crafted descriptors to learned sequence and graph representations?\n- Which papers produce actionable wet-lab candidates?\n- Which papers emphasize interpretability, and what kind?\n- Where are the current gaps in the drug discovery pipeline?\n\n## Suggested Future Overviews\n\n- `binding-region-models-vs-docking.md` - compare HoTS, DeepConv-DTI, and the P2X3R screening paper.\n- `ai-drug-discovery-safety-vs-activity.md` - compare activity prediction with BayeshERG safety prediction.\n- `sequence-models-for-drug-discovery.md` - compare DeepConv-DTI, HoTS, and AMP-BERT.\n"
+    },
+    {
+      "title": "Peptide Function",
+      "relative_path": "drug-discovery/peptide-function/category-peptide-function.md",
+      "absolute_path": "C:\\Users\\dlsrnsi\\OneDrive\\문서\\New project\\wiki\\drug-discovery\\peptide-function\\category-peptide-function.md",
+      "page_type": "category",
+      "properties": {
+        "Title": "Peptide Function",
+        "Page Type": "category",
+        "Domain": "drug-discovery",
+        "Sub-domain": "peptide-function",
+        "Wiki Path": "wiki/drug-discovery/peptide-function/category-peptide-function.md",
+        "Sync Hash": "099c5d8a0511a61319a085da62c3a2da8293209a77f886284933a79dc04c9cf0"
+      },
+      "content": "# Peptide Function\n\n- [[lee-2022-amp-bert-prediction-of-antimicrobial]] - BERT-based antimicrobial peptide classification.\n\n## Comparative Summary\n\nThis category currently has one peptide-focused paper. [[lee-2022-amp-bert-prediction-of-antimicrobial]] is adjacent to the small-molecule DTI papers, but its input and discovery object are different: it classifies peptide sequences as antimicrobial or non-antimicrobial using a protein language model.\n\nCompared with [[drug-discovery/drug-target-interactions/lee-2019-deepconv-dti-prediction-of-drug]], AMP-BERT uses transformer pretraining rather than training sequence motifs mostly from task-specific DTI labels. Compared with [[drug-discovery/drug-target-interactions/lee-2022-sequence-based-prediction-of-protein]], its attention analysis is about peptide structural motifs such as disulfide-bond cysteines, alpha-helices, and beta-strands, rather than ligand binding regions on target proteins.\n\n## Comparison With Sequence Models\n\n| Paper | Sequence object | Model style | Interpretability target |\n|---|---|---|---|\n| [[drug-discovery/drug-target-interactions/lee-2019-deepconv-dti-prediction-of-drug]] | Target protein sequence | CNN over residue windows | Local motifs and binding-site enrichment |\n| [[drug-discovery/drug-target-interactions/lee-2022-sequence-based-prediction-of-protein]] | Target protein sequence grids | CNN + transformer + BR supervision | Binding regions for ligand interaction |\n| [[lee-2022-amp-bert-prediction-of-antimicrobial]] | Peptide sequence | ProtBERT-BFD fine-tuning | AMP structural motifs and residue attention |\n\n## Main Takeaway\n\nAMP-BERT shows how the same broad idea, biological sequences as language-like inputs, can support peptide drug discovery rather than small-molecule target interaction prediction.\n"
+    },
+    {
+      "title": "AMP-BERT: Prediction of antimicrobial peptide function based on a BERT model",
+      "relative_path": "drug-discovery/peptide-function/lee-2022-amp-bert-prediction-of-antimicrobial.md",
+      "absolute_path": "C:\\Users\\dlsrnsi\\OneDrive\\문서\\New project\\wiki\\drug-discovery\\peptide-function\\lee-2022-amp-bert-prediction-of-antimicrobial.md",
+      "page_type": "paper",
+      "properties": {
+        "Title": "AMP-BERT: Prediction of antimicrobial peptide function based on a BERT model",
+        "Page Type": "paper",
+        "Domain": "drug-discovery",
+        "Sub-domain": "peptide-function",
+        "Wiki Path": "wiki/drug-discovery/peptide-function/lee-2022-amp-bert-prediction-of-antimicrobial.md",
+        "Sync Hash": "40315b2d75dbbfeaf3d039a0c128439ac6cf56cb4e87350255e3629e7cc3b3c7",
+        "Paper ID": "lee-2022-amp-bert-prediction-of-antimicrobial",
+        "Year": 2022,
+        "Status": "draft"
+      },
+      "content": "## Summary\n\nAMP-BERT adapts a BERT-style transformer model to antimicrobial peptide classification. It treats peptide sequences as model input and uses attention analysis to interpret residues associated with antimicrobial function.\n\n## Key Contributions\n\n- Fine-tunes BERT for AMP versus non-AMP prediction.\n- Reports best performance among evaluated methods on a curated external dataset.\n- Uses attention to inspect residue-level signals.\n\n## Materials and Data\n\nThe fine-tuning set contains 1,778 APD3 AMP positives and 1,778 UniProt-derived non-AMP negatives from Veltri et al. The external test set contains 2,065 DRAMP positives and 1,908 AmPEP/UniProt-derived negatives after CD-HIT filtering, length filtering, and removal of close training-set matches.\n\n## Methods\n\nAMP-BERT fine-tunes ProtBERT-BFD, a BERT model pretrained on about 2.1 billion protein sequences. Each peptide is tokenized residue-by-residue with CLS, SEP, and PAD tokens to a fixed length of 200. Token embeddings are 1,024-dimensional. The model uses the CLS embedding as the whole-peptide representation, then applies a fully connected layer and sigmoid classifier.\n\nTraining used AdamW, binary cross-entropy, learning rate 5e-5, 15 epochs, no warm-up, and weight decay 0.1. The model was checked with five-repeated 10-fold cross-validation and then retrained on all 3,556 fine-tuning sequences.\n\n## Results\n\nOn the 3,973-sequence external test set, AMP-BERT achieved SN 0.8760, SP 0.6352, F1 0.7917, ACC 0.7604, AUROC 0.8183, and AUPR 0.7866. It outperformed CTD + RF and AMPscanner on most balanced metrics. On the 2,640-sequence PSSM-available subset, AMP-BERTsub outperformed ACEP with F1 0.8049, ACC 0.7610, AUROC 0.8445, and AUPR 0.7984.\n\nThe interpretability analysis is unusually concrete: attention patterns highlighted cysteine residues in disulfide-rich AMPs such as Siamycin II and Leaf cyclotide 1, and also matched alpha-helix/beta-strand regions in EcAMP1 and gamma-1-purothionin.\n\n## Limitations\n\nAMP-BERT predicts AMP versus non-AMP sequence labels, not microbial specificity, mechanism, toxicity, stability, or experimental therapeutic suitability. Structural interpretation is attention-based and limited by available peptide structure data.\n\n## Related Papers\n\nNo direct paper-to-paper method/result link is recorded yet. This page is connected at the category and overview levels as the peptide-sequence counterpart to small-molecule DTI sequence models.\n"
+    },
+    {
+      "title": "Reviews",
+      "relative_path": "drug-discovery/reviews/category-reviews.md",
+      "absolute_path": "C:\\Users\\dlsrnsi\\OneDrive\\문서\\New project\\wiki\\drug-discovery\\reviews\\category-reviews.md",
+      "page_type": "category",
+      "properties": {
+        "Title": "Reviews",
+        "Page Type": "category",
+        "Domain": "drug-discovery",
+        "Sub-domain": "reviews",
+        "Wiki Path": "wiki/drug-discovery/reviews/category-reviews.md",
+        "Sync Hash": "40c411c9431f33a6f9a8ebe25a13c8ee8f320672ce35e7f492ee819d6c598dd3"
+      },
+      "content": "# Reviews\n\n- [[kim-2020-artificial-intelligence-in-drug]] - Review of AI and machine learning across the drug discovery process.\n\n## Comparative Summary\n\nThis category currently has one review paper, but it should be treated as the map for the whole `drug-discovery` folder. [[kim-2020-artificial-intelligence-in-drug]] organizes AI drug discovery into target identification, hit identification, ADMET prediction, lead optimization, and drug repositioning.\n\nThe other papers fit into that map. [[drug-discovery/drug-target-interactions/lee-2018-identification-of-drug-target]], [[drug-discovery/drug-target-interactions/lee-2019-deepconv-dti-prediction-of-drug]], and [[drug-discovery/drug-target-interactions/lee-2022-sequence-based-prediction-of-protein]] belong mostly to hit identification and DTI prediction. [[drug-discovery/binding-sites-virtual-screening/kang-2022-ai-based-prediction-of-new]] is an applied hit-identification workflow. [[drug-discovery/admet-safety/kim-2022-bayesherg-a-robust-reliable]] belongs to ADMET/safety. [[drug-discovery/peptide-function/lee-2022-amp-bert-prediction-of-antimicrobial]] extends the collection toward peptide-based therapeutic discovery.\n\n## Pipeline Placement\n\n| Pipeline stage | Current wiki papers |\n|---|---|\n| Target / interaction prediction | [[drug-discovery/drug-target-interactions/lee-2018-identification-of-drug-target]], [[drug-discovery/drug-target-interactions/lee-2019-deepconv-dti-prediction-of-drug]], [[drug-discovery/drug-target-interactions/lee-2022-sequence-based-prediction-of-protein]] |\n| Hit identification / virtual screening | [[drug-discovery/binding-sites-virtual-screening/kang-2022-ai-based-prediction-of-new]] |\n| ADMET / toxicity | [[drug-discovery/admet-safety/kim-2022-bayesherg-a-robust-reliable]] |\n| Peptide therapeutic discovery | [[drug-discovery/peptide-function/lee-2022-amp-bert-prediction-of-antimicrobial]] |\n| Lead optimization / repositioning | Not yet represented by a dedicated paper |\n\n## Main Takeaway\n\nThe review exposes gaps in the current wiki: there is good coverage of DTI, binding-region prediction, screening, and hERG safety, but little dedicated coverage yet for lead optimization, generative molecule design, drug repositioning, pharmacokinetics, or clinical translation.\n"
+    },
+    {
+      "title": "Artificial Intelligence in Drug Discovery: A Comprehensive Review of Data-driven and Machine Learning Approaches",
+      "relative_path": "drug-discovery/reviews/kim-2020-artificial-intelligence-in-drug.md",
+      "absolute_path": "C:\\Users\\dlsrnsi\\OneDrive\\문서\\New project\\wiki\\drug-discovery\\reviews\\kim-2020-artificial-intelligence-in-drug.md",
+      "page_type": "paper",
+      "properties": {
+        "Title": "Artificial Intelligence in Drug Discovery: A Comprehensive Review of Data-driven and Machine Learning Approaches",
+        "Page Type": "paper",
+        "Domain": "drug-discovery",
+        "Sub-domain": "reviews",
+        "Wiki Path": "wiki/drug-discovery/reviews/kim-2020-artificial-intelligence-in-drug.md",
+        "Sync Hash": "1616cf87b1a232ca0f39e5a28e04feb4f4e0720b7311e7577e6d2cf1fa2a55c8",
+        "Paper ID": "kim-2020-artificial-intelligence-in-drug",
+        "Year": 2020,
+        "Status": "draft"
+      },
+      "content": "## Summary\n\nThis review maps AI and machine learning methods onto the drug discovery pipeline. It covers target identification, hit identification, ADMET prediction, lead optimization, and drug repositioning.\n\n## Key Contributions\n\n- Gives the current wiki its broad drug discovery frame.\n- Organizes AI applications by discovery stage.\n- Summarizes data sources and discusses limitations and future directions.\n\n## Materials and Data\n\nThis is a review paper, so the material base is not a single dataset. Instead, the review catalogs database families: omics and disease resources for target identification; ligand, structure, and DTI resources for hit identification; ADMET endpoint databases; molecular corpora for generative lead optimization; and drug/disease/side-effect/expression resources for repositioning.\n\n## Methods\n\nThe review method is a structured survey of the drug discovery pipeline. It divides AI-guided discovery into target identification, hit identification, ADMET prediction, lead optimization, and drug repositioning, then compares representative computational approaches and databases for each stage.\n\n## Results\n\nThe review's main result is a pipeline map:\n\n- Target identification uses statistical omics, networks, and ML to connect genes/proteins to disease.\n- Hit identification uses structure-based, ligand-based, and chemogenomic methods to prioritize compounds.\n- ADMET prediction filters compounds for pharmacokinetic and safety risk, including toxicity endpoints such as hERG.\n- Lead optimization increasingly uses generative RNNs, autoencoders, and reinforcement learning to suggest improved molecules.\n- Drug repositioning uses networks, ML, deep learning, side effects, expression signatures, and disease resources to find new indications.\n\nThe recurring bottleneck is data: heterogeneous formats, inconsistent assay labels, biased coverage, and limited interpretability. This makes the review a useful anchor for the other pages: DeepConv-DTI and HoTS sit in hit/DTI prediction, BayeshERG sits in ADMET/safety, and the P2X3R paper is a concrete hit-identification workflow.\n\n## Limitations\n\nAs a broad review, this paper is not a benchmark and does not validate a new method. Its conclusions should be used as pipeline context, not as direct evidence that one model outperforms another.\n\n## Related Papers\n\nNo direct paper-to-paper method/result link is recorded here. The review is connected through category and overview pages that map papers onto drug discovery pipeline stages.\n"
+    },
+    {
+      "title": "LLM Wiki",
+      "relative_path": "main.md",
+      "absolute_path": "C:\\Users\\dlsrnsi\\OneDrive\\문서\\New project\\wiki\\main.md",
+      "page_type": "root",
+      "properties": {
+        "Title": "LLM Wiki",
+        "Page Type": "root",
+        "Domain": "",
+        "Sub-domain": "",
+        "Wiki Path": "wiki/main.md",
+        "Sync Hash": "809856ff80329298faac458de0f051d1e9dec739cc9566a60f3380c64a410350"
+      },
+      "content": "# LLM Wiki\n\n## Domains\n\n- [[drug-discovery/drug-discovery-main|Drug discovery]]\n\n## Vault Notes\n\nOpen Obsidian from this `wiki/` folder. The project-level `data/`, `papers/`, and `sources/` folders remain outside the vault as the agent-facing registry and source archive.\n"
+    }
+  ]
+}

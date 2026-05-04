@@ -1,0 +1,15 @@
+# Raw and canonical paper PDFs stay local.
+papers/
+
+# Python/runtime noise
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+
+# Local environment files
+.env
+.env.*

@@ -1,0 +1,15 @@
+ingests:
+  - date: 2026-05-01
+    source_folder: papers/My_papers
+    added:
+      - kang-2022-ai-based-prediction-of-new
+      - kim-2022-bayesherg-a-robust-reliable
+      - lee-2019-deepconv-dti-prediction-of-drug
+      - lee-2022-amp-bert-prediction-of-antimicrobial
+      - kim-2020-artificial-intelligence-in-drug
+      - lee-2018-identification-of-drug-target
+      - lee-2022-sequence-based-prediction-of-protein
+    duplicates:
+      - kept: papers/My_papers/1-s2.0-S0223523422004585-main.pdf
+        duplicate: papers/My_papers/1-s2.0-S0223523422004585-main(1).pdf
+        sha256: 1D514BFCF80C8B5363BE7DDDAF26B4CF6E9E46713D8D55651E9F1B1A34B8F26D

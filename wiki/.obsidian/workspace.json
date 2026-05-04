@@ -1,0 +1,221 @@
+{
+  "main": {
+    "id": "50c63d55c03f3859",
+    "type": "split",
+    "children": [
+      {
+        "id": "2dbc6f36ac761365",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "34812a9803b4954d",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "그래프 뷰"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "bca5d57a58b080b7",
+    "type": "split",
+    "children": [
+      {
+        "id": "e9217fdf1a8654c9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7f01035f18801a2d",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "파일 탐색기"
+            }
+          },
+          {
+            "id": "0635f3c96839f9ef",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "검색"
+            }
+          },
+          {
+            "id": "9ea2fa66339133a0",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "북마크"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "058137358b605630",
+    "type": "split",
+    "children": [
+      {
+        "id": "c4a90910434fbbca",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6daa20758bcd6915",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "백링크"
+            }
+          },
+          {
+            "id": "f1d717091c9f985d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "나가는 링크"
+            }
+          },
+          {
+            "id": "daabe0d4e7ac189c",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "태그"
+            }
+          },
+          {
+            "id": "e653a4f01172488d",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "모든 속성"
+            }
+          },
+          {
+            "id": "2637bd3f7994ba00",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "개요"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:빠른 전환기 열기": false,
+      "graph:그래프 뷰 열기": false,
+      "canvas:새 캔버스 만들기": false,
+      "daily-notes:오늘의 일일 노트 열기": false,
+      "templates:템플릿 삽입": false,
+      "command-palette:명령어 팔레트 열기": false,
+      "bases:새 베이스 생성하기": false
+    }
+  },
+  "active": "34812a9803b4954d",
+  "lastOpenFiles": [
+    "main.md",
+    "drug-discovery/drug-target-interactions/lee-2022-sequence-based-prediction-of-protein.md",
+    "drug-discovery/drug-target-interactions/lee-2019-deepconv-dti-prediction-of-drug.md",
+    "drug-discovery/drug-target-interactions/lee-2018-identification-of-drug-target.md",
+    "drug-discovery/reviews/category-reviews.md",
+    "drug-discovery/drug-discovery-main.md",
+    "drug-discovery/overviews/category-overviews.md",
+    "drug-discovery/overviews/ai-drug-discovery-sequence-and-interaction-models.md",
+    "drug-discovery/assets/deepconv-dti-figure-1.png",
+    "drug-discovery/drug-target-interactions/category-drug-target-interactions.md",
+    "drug-target-interactions/category-drug-target-interactions.md",
+    "drug-discovery/assets",
+    "drug-discovery/other/category-other.md",
+    "drug-discovery/other",
+    "drug-discovery/concepts/category-concepts.md",
+    "drug-discovery/concepts",
+    "drug-discovery/overviews",
+    "drug-discovery/reviews/kim-2020-artificial-intelligence-in-drug.md",
+    "drug-discovery/reviews",
+    "drug-discovery/peptide-function/lee-2022-amp-bert-prediction-of-antimicrobial.md",
+    "drug-discovery/peptide-function/category-peptide-function.md",
+    "drug-discovery/peptide-function",
+    "drug-discovery/drug-target-interactions",
+    "drug-discovery/binding-sites-virtual-screening/kang-2022-ai-based-prediction-of-new.md",
+    "drug-discovery/binding-sites-virtual-screening/category-binding-sites-virtual-screening.md",
+    "drug-discovery/binding-sites-virtual-screening",
+    "drug-discovery/admet-safety/kim-2022-bayesherg-a-robust-reliable.md",
+    "drug-discovery/admet-safety/category-admet-safety.md",
+    "drug-discovery/admet-safety",
+    "drug-discovery",
+    "drug-target-interactions/lee-2019-deepconv-dti-prediction-of-drug.md",
+    "drug-target-interactions/lee-2018-identification-of-drug-target.md",
+    "binding-sites-virtual-screening/kang-2022-ai-based-prediction-of-new.md",
+    "assets/deepconv-dti-figure-1.png",
+    "assets/deepconv-dti-page-4.png",
+    "drug-target-interactions/lee-2022-sequence-based-prediction-of-protein.md",
+    "binding-sites-virtual-screening/category-binding-sites-virtual-screening.md",
+    "무제.canvas",
+    "reviews/kim-2020-artificial-intelligence-in-drug.md"
+  ]
+}
