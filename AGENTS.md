@@ -1,4 +1,4 @@
-# LLM Wiki - AI Drug Discovery Papers
+# LLM Wiki - For Research
 
 A personal knowledge base of academic papers, following the LLM Wiki pattern:
 
