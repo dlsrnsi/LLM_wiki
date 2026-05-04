@@ -12,8 +12,8 @@ manifest: data/notion-sync-payload.json
 target:
   mode: database       # unset | page_tree | database
   parent_page_id:
-  database_id: 35438e1b-6b14-8044-9598-fc0a25f60270
-  data_source_id: 35438e1b-6b14-8079-b944-000b2fb14b11
+  database_id:
+  data_source_id:
 
 properties:
   title: Title
@@ -28,57 +28,3 @@ properties:
   last_synced: Last Synced
 
 pages:
-  wiki/drug-discovery/admet-safety/category-admet-safety.md:
-    page_id: 35438e1b-6b14-8191-a1ea-f08d00ba157c
-    sync_hash: 3ec0353ad213e458f2a767b51c7a3d519004d4ccc7c568a156b704f8d97b792b
-  wiki/drug-discovery/admet-safety/kim-2022-bayesherg-a-robust-reliable.md:
-    page_id: 35438e1b-6b14-81cc-93aa-e231b4ab6f68
-    sync_hash: 4ede1c407d511312a684d79cbaa0234f3237ffc1a55d80376a4ff4b3d5ba57dc
-  wiki/drug-discovery/binding-sites-virtual-screening/category-binding-sites-virtual-screening.md:
-    page_id: 35438e1b-6b14-8138-8540-f4c92222b494
-    sync_hash: c2f718cbbbcb50aca427d20c0cb8ccf600cccdec856166df0479c69288279dc0
-  wiki/drug-discovery/binding-sites-virtual-screening/kang-2022-ai-based-prediction-of-new.md:
-    page_id: 35438e1b-6b14-8167-a10d-e23c90f5f359
-    sync_hash: be7c38d0956f7d0f9d54252736f74167102df1ef658a91b189c857f7c9f0d4ba
-  wiki/drug-discovery/concepts/category-concepts.md:
-    page_id: 35438e1b-6b14-81b7-9a58-d0b3567028f2
-    sync_hash: abb11d01c119ca6720b43a8afdc65cee87ed356c5787f6ac6b6b61f577ae92f2
-  wiki/drug-discovery/drug-discovery-main.md:
-    page_id: 35438e1b-6b14-81af-af22-ebd75eca94fd
-    sync_hash: 0e9d980927aada30e48800353a71cd68cc254f72afe2b8cc905df66a89f8a3b0
-  wiki/drug-discovery/drug-target-interactions/category-drug-target-interactions.md:
-    page_id: 35438e1b-6b14-8114-a0dd-d8d5b7d93e0b
-    sync_hash: 836692a031796ac39f97d0fbb515acca82f3e7d35b103b97f7340eb4d7bbfbb6
-  wiki/drug-discovery/drug-target-interactions/lee-2018-identification-of-drug-target.md:
-    page_id: 35438e1b-6b14-812c-923f-dc1890e9dcc2
-    sync_hash: 2127b15df96b262a2bda8624f114a33a52bb94bb7ea2cc64bca8c647708ad217
-  wiki/drug-discovery/drug-target-interactions/lee-2019-deepconv-dti-prediction-of-drug.md:
-    page_id: 35438e1b-6b14-810d-9cb4-c44eb78ff0fa
-    sync_hash: 7515a3e2affaf92129070e377d2c1de8cf16cf9a6ca748981287b2b7df5e2733
-  wiki/drug-discovery/drug-target-interactions/lee-2022-sequence-based-prediction-of-protein.md:
-    page_id: 35438e1b-6b14-8183-8862-f9f7a2959973
-    sync_hash: 1b947646375431568c97e3972d661c387d2cc24dbd3b7ec832a28522d2d5abd5
-  wiki/drug-discovery/other/category-other.md:
-    page_id: 35438e1b-6b14-813b-b180-ecd58e934973
-    sync_hash: d06b0fbf788872e5e06d3db5ed2e5e408f9d52dfcdac6f5c6ee4001bdc4ecb87
-  wiki/drug-discovery/overviews/ai-drug-discovery-sequence-and-interaction-models.md:
-    page_id: 35438e1b-6b14-8127-a58d-c35e9d318ccb
-    sync_hash: 977771969664450c63c271bc3a8f31447d7b1e3fa559e14ab19fb6ba4428f121
-  wiki/drug-discovery/overviews/category-overviews.md:
-    page_id: 35438e1b-6b14-8172-b945-e7e9db9a64b6
-    sync_hash: 2b05d5075dcf5e3f74e2ce58c8c2852c5e0636e4e69a125c2b5571c6b0b93ffd
-  wiki/drug-discovery/peptide-function/category-peptide-function.md:
-    page_id: 35438e1b-6b14-8174-8b17-ddbcd2ff146e
-    sync_hash: 099c5d8a0511a61319a085da62c3a2da8293209a77f886284933a79dc04c9cf0
-  wiki/drug-discovery/peptide-function/lee-2022-amp-bert-prediction-of-antimicrobial.md:
-    page_id: 35438e1b-6b14-81f1-9286-e2e569e9c0da
-    sync_hash: 40315b2d75dbbfeaf3d039a0c128439ac6cf56cb4e87350255e3629e7cc3b3c7
-  wiki/drug-discovery/reviews/category-reviews.md:
-    page_id: 35438e1b-6b14-81ae-9116-f5d0f950a711
-    sync_hash: 40c411c9431f33a6f9a8ebe25a13c8ee8f320672ce35e7f492ee819d6c598dd3
-  wiki/drug-discovery/reviews/kim-2020-artificial-intelligence-in-drug.md:
-    page_id: 35438e1b-6b14-8142-8dfc-fe22d0393cc5
-    sync_hash: 1616cf87b1a232ca0f39e5a28e04feb4f4e0720b7311e7577e6d2cf1fa2a55c8
-  wiki/main.md:
-    page_id: 35438e1b-6b14-8192-8d14-fb4a0cc6093e
-    sync_hash: 809856ff80329298faac458de0f051d1e9dec739cc9566a60f3380c64a410350
