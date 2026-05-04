@@ -54,3 +54,5 @@ The largest gains are described in high-LD regimes. The draft also notes an exce
 - SuSiE: sum-of-single-effects fine-mapping baseline.
 - Transformer/BERT: architecture and pretraining foundation.
 - Nucleotide Transformer/DNABERT: genomic language model context.
+- DNABERT-2, HyenaDNA, Caduceus, GROVER, and BMFM-DNA: broader genomic foundation model context, mostly sequence- or variant-aware rather than genotype/LD fine-mapping models.
+- GenoBERT: strongest genotype-language-model comparison. Both GenoBERT and GLFM use BERT-style genotype representations and LD context, but GenoBERT optimizes imputation while GLFM optimizes causal SNP prioritization.

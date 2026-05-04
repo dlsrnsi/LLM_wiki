@@ -38,3 +38,36 @@ glfm:
       status: downloaded
       id: dalla-torre-2025-nucleotide-transformer-building-and
       url: https://www.nature.com/articles/s41592-024-02523-z.pdf
+    - citation: Zhou et al. 2024
+      status: downloaded
+      id: zhou-2024-dnabert-2-efficient-foundation-model
+      url: https://arxiv.org/pdf/2306.15006
+    - citation: Nguyen et al. 2023
+      status: downloaded
+      id: nguyen-2023-hyenadna-long-range-genomic-sequence
+      url: https://arxiv.org/pdf/2306.15794
+    - citation: Schiff et al. 2024
+      status: downloaded
+      id: schiff-2024-caduceus-bi-directional-equivariant-long
+      url: https://arxiv.org/pdf/2403.03234
+    - citation: Sanabria et al. 2024
+      status: downloaded
+      id: sanabria-2024-dna-language-model-grover-learns
+      url: https://www.nature.com/articles/s42256-024-00872-0.pdf
+    - citation: Li et al. 2025
+      status: downloaded
+      id: chen-2025-bmfm-dna-a-snp-aware
+      url: https://arxiv.org/pdf/2507.05265
+    - citation: Huang et al. 2026
+      status: downloaded
+      id: huang-2026-genobert-a-language-model-for
+      url: https://arxiv.org/pdf/2604.00058
+    - citation: Brixi et al. 2026
+      status: downloaded
+      id: brixi-2026-genome-modelling-and-design-across
+      url: https://www.nature.com/articles/s41586-026-10176-5.pdf
+    - citation: Fishman et al. 2025
+      status: failed
+      reason: Oxford PDF download returned HTTP 403.
+      doi: 10.1093/nar/gkae1310
+      attempted_url: https://academic.oup.com/nar/article-pdf/53/2/gkae1310/62048023/gkae1310.pdf

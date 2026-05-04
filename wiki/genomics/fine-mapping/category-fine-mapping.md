@@ -10,6 +10,8 @@ This sub-domain now contains one model-development draft and two statistical fin
 
 FINEMAP searches high-posterior causal configurations. SuSiE decomposes sparse effects into a sum of single-effect components and returns credible sets. GLFM instead uses LD-aware transformer pretraining, LoRA phenotype fine-tuning, and leave-one-SNP-out representation trajectory ablation, then redistributes inflated proxy scores using DTW and curvature-divergence couplings.
 
+The closest language-model comparison is now [[genomics/genotype-language-models/huang-2026-genobert-a-language-model-for]]. GenoBERT and GLFM both read genotype-state sequences rather than reference DNA strings, but GenoBERT optimizes masked genotype imputation while GLFM uses the BERT encoder for phenotype fine-tuning and causal SNP scoring.
+
 ## Comparison Table
 
 | Paper | Main input | Core method | Output | Role for GLFM |
@@ -17,8 +19,8 @@ FINEMAP searches high-posterior causal configurations. SuSiE decomposes sparse e
 | [[benner-2016-finemap-efficient-variable-selection]] | GWAS summary statistics + LD | Bayesian configuration search | Posterior causal configurations and PIPs | Statistical baseline |
 | [[wang-2020-simple-new-approach-to-variable]] | Regression data or summary fine-mapping setup | Sum of single effects | PIPs and credible sets | Statistical baseline |
 | [[lee-2026-genomic-language-based-finemapping]] | Genotype sequence + LD + phenotype | LD-aware BERT, LoRA, trajectory ablation, redistribution | Causal SNP ranking | New representation-based method |
+| [[genomics/genotype-language-models/huang-2026-genobert-a-language-model-for]] | Phased genotype tokens | BERT-style masked genotype recovery with genomic positional bias | Imputed genotypes | Closest genotype-language-model comparator |
 
 ## Main Takeaway
 
 GLFM's main hypothesis is that LD is not only a confounder to correct statistically, but also a structural signal that can guide representation learning. This makes it methodologically connected to transformer and BERT papers, but its evaluation target remains fine-mapping AUPR against causal SNP labels.
-

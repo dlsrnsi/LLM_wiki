@@ -13,3 +13,18 @@ ingests:
       - kept: papers/My_papers/1-s2.0-S0223523422004585-main.pdf
         duplicate: papers/My_papers/1-s2.0-S0223523422004585-main(1).pdf
         sha256: 1D514BFCF80C8B5363BE7DDDAF26B4CF6E9E46713D8D55651E9F1B1A34B8F26D
+  - date: 2026-05-04
+    source_folder: web-open-access
+    added:
+      - zhou-2024-dnabert-2-efficient-foundation-model
+      - nguyen-2023-hyenadna-long-range-genomic-sequence
+      - schiff-2024-caduceus-bi-directional-equivariant-long
+      - sanabria-2024-dna-language-model-grover-learns
+      - chen-2025-bmfm-dna-a-snp-aware
+      - huang-2026-genobert-a-language-model-for
+      - brixi-2026-genome-modelling-and-design-across
+    not_added:
+      - title: GENA-LM, a family of open-source foundational DNA language models for long sequences
+        doi: 10.1093/nar/gkae1310
+        reason: Oxford PDF download returned 403; DOI recorded in genomic foundation model category page.
+    duplicates: []

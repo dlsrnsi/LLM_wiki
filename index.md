@@ -15,6 +15,7 @@ This catalog tracks papers and overview pages in the local wiki.
 - [[wiki/genomics/fine-mapping/category-fine-mapping|fine-mapping]] - Statistical and representation-based causal variant fine-mapping
 - [[wiki/genomics/gwas-reviews/category-gwas-reviews|gwas-reviews]] - GWAS discovery and interpretation reviews
 - [[wiki/genomics/genomic-foundation-models/category-genomic-foundation-models|genomic-foundation-models]] - DNA/genome foundation models
+- [[wiki/genomics/genotype-language-models/category-genotype-language-models|genotype-language-models]] - Genotype, haplotype, and LD-aware language models
 - [[wiki/machine-learning/transformer-language-models/category-transformer-language-models|transformer-language-models]] - Transformer and BERT method foundations
 
 ## Papers
@@ -32,6 +33,13 @@ This catalog tracks papers and overview pages in the local wiki.
 - [[wiki/genomics/gwas-reviews/visscher-2017-10-years-of-gwas-discovery|Visscher et al. 2017 - 10 Years of GWAS Discovery]]
 - [[wiki/genomics/genomic-foundation-models/ji-2021-dnabert-pre-trained-bidirectional-encoder|Ji et al. 2021 - DNABERT]]
 - [[wiki/genomics/genomic-foundation-models/dalla-torre-2025-nucleotide-transformer-building-and|Dalla-Torre et al. 2025 - Nucleotide Transformer]]
+- [[wiki/genomics/genomic-foundation-models/zhou-2024-dnabert-2-efficient-foundation-model|Zhou et al. 2024 - DNABERT-2]]
+- [[wiki/genomics/genomic-foundation-models/nguyen-2023-hyenadna-long-range-genomic-sequence|Nguyen et al. 2023 - HyenaDNA]]
+- [[wiki/genomics/genomic-foundation-models/schiff-2024-caduceus-bi-directional-equivariant-long|Schiff et al. 2024 - Caduceus]]
+- [[wiki/genomics/genomic-foundation-models/sanabria-2024-dna-language-model-grover-learns|Sanabria et al. 2024 - GROVER]]
+- [[wiki/genomics/genomic-foundation-models/chen-2025-bmfm-dna-a-snp-aware|Li et al. 2025 - BMFM-DNA]]
+- [[wiki/genomics/genomic-foundation-models/brixi-2026-genome-modelling-and-design-across|Brixi et al. 2026 - Evo 2]]
+- [[wiki/genomics/genotype-language-models/huang-2026-genobert-a-language-model-for|Huang et al. 2026 - GenoBERT]]
 - [[wiki/machine-learning/transformer-language-models/vaswani-2017-attention-is-all-you-need|Vaswani et al. 2017 - Attention Is All You Need]]
 - [[wiki/machine-learning/transformer-language-models/devlin-2018-bert-pre-training-of-deep|Devlin et al. 2018 - BERT]]
 

@@ -284,3 +284,163 @@ papers:
     status: draft
     raw_imports:
       - papers/btab083.pdf
+
+  - id: zhou-2024-dnabert-2-efficient-foundation-model
+    domain: genomics
+    title: "DNABERT-2: Efficient Foundation Model and Benchmark For Multi-Species Genome"
+    authors:
+      - Zhihan Zhou
+      - Yanrong Ji
+      - Weijian Li
+      - Pratik Dutta
+      - Ramana V. Davuluri
+      - Han Liu
+    year: 2024
+    doi: 10.48550/arXiv.2306.15006
+    category: genomic-foundation-models
+    pdf: papers/zhou-2024-dnabert-2-efficient-foundation-model.pdf
+    source: sources/zhou-2024-dnabert-2-efficient-foundation-model.md
+    wiki: wiki/genomics/genomic-foundation-models/zhou-2024-dnabert-2-efficient-foundation-model.md
+    status: draft
+    raw_imports:
+      - https://arxiv.org/pdf/2306.15006
+
+  - id: nguyen-2023-hyenadna-long-range-genomic-sequence
+    domain: genomics
+    title: "HyenaDNA: Long-Range Genomic Sequence Modeling at Single Nucleotide Resolution"
+    authors:
+      - Eric Nguyen
+      - Michael Poli
+      - Marjan Faizi
+      - Armin W. Thomas
+      - Callum Birch Sykes
+      - Michael Wornow
+      - Aman Patel
+      - Clayton Rabideau
+      - Stefano Massaroli
+      - Yoshua Bengio
+      - Stefano Ermon
+      - Stephen A. Baccus
+      - Christopher Ré
+    year: 2023
+    doi: 10.48550/arXiv.2306.15794
+    category: genomic-foundation-models
+    pdf: papers/nguyen-2023-hyenadna-long-range-genomic-sequence.pdf
+    source: sources/nguyen-2023-hyenadna-long-range-genomic-sequence.md
+    wiki: wiki/genomics/genomic-foundation-models/nguyen-2023-hyenadna-long-range-genomic-sequence.md
+    status: draft
+    raw_imports:
+      - https://arxiv.org/pdf/2306.15794
+
+  - id: schiff-2024-caduceus-bi-directional-equivariant-long
+    domain: genomics
+    title: "Caduceus: Bi-Directional Equivariant Long-Range DNA Sequence Modeling"
+    authors:
+      - Yair Schiff
+      - Chia-Hsiang Kao
+      - Aaron Gokaslan
+      - Tri Dao
+      - Albert Gu
+      - Volodymyr Kuleshov
+    year: 2024
+    doi: 10.48550/arXiv.2403.03234
+    category: genomic-foundation-models
+    pdf: papers/schiff-2024-caduceus-bi-directional-equivariant-long.pdf
+    source: sources/schiff-2024-caduceus-bi-directional-equivariant-long.md
+    wiki: wiki/genomics/genomic-foundation-models/schiff-2024-caduceus-bi-directional-equivariant-long.md
+    status: draft
+    raw_imports:
+      - https://arxiv.org/pdf/2403.03234
+
+  - id: sanabria-2024-dna-language-model-grover-learns
+    domain: genomics
+    title: DNA language model GROVER learns sequence context in the human genome
+    authors:
+      - Melissa Sanabria
+      - Jonas Hirsch
+      - Pierre M. Joubert
+      - Anna R. Poetsch
+    year: 2024
+    doi: 10.1038/s42256-024-00872-0
+    category: genomic-foundation-models
+    pdf: papers/sanabria-2024-dna-language-model-grover-learns.pdf
+    source: sources/sanabria-2024-dna-language-model-grover-learns.md
+    wiki: wiki/genomics/genomic-foundation-models/sanabria-2024-dna-language-model-grover-learns.md
+    status: draft
+    raw_imports:
+      - https://www.nature.com/articles/s42256-024-00872-0.pdf
+
+  - id: chen-2025-bmfm-dna-a-snp-aware
+    domain: genomics
+    title: "BMFM-DNA: A SNP-aware DNA foundation model to capture variant effects"
+    authors:
+      - Hongyang Li
+      - Sanjoy Dey
+      - Bum Chul Kwon
+      - Michael Danziger
+      - Michal Rosen-Tzvi
+      - Jianying Hu
+      - James Kozloski
+      - Ching-Huei Tsou
+      - Bharath Dandala
+      - Pablo Meyer
+    year: 2025
+    doi: 10.48550/arXiv.2507.05265
+    category: genomic-foundation-models
+    pdf: papers/chen-2025-bmfm-dna-a-snp-aware.pdf
+    source: sources/chen-2025-bmfm-dna-a-snp-aware.md
+    wiki: wiki/genomics/genomic-foundation-models/chen-2025-bmfm-dna-a-snp-aware.md
+    status: draft
+    raw_imports:
+      - https://arxiv.org/pdf/2507.05265
+
+  - id: huang-2026-genobert-a-language-model-for
+    domain: genomics
+    title: "GenoBERT: A Language Model for Accurate Genotype Imputation"
+    authors:
+      - Lei Huang
+      - Chuan Qiu
+      - Kuan-Jui Su
+      - Anqi Liu
+      - Yun Gong
+      - Weiqiang Lin
+      - Lindong Jiang
+      - Chen Zhao
+      - Meng Song
+      - Jeffrey Deng
+      - Qing Tian
+      - Zhe Luo
+      - Ping Gong
+      - Hui Shen
+      - Chaoyang Zhang
+      - Hong-Wen Deng
+    year: 2026
+    doi: 10.48550/arXiv.2604.00058
+    category: genotype-language-models
+    pdf: papers/huang-2026-genobert-a-language-model-for.pdf
+    source: sources/huang-2026-genobert-a-language-model-for.md
+    wiki: wiki/genomics/genotype-language-models/huang-2026-genobert-a-language-model-for.md
+    status: draft
+    raw_imports:
+      - https://arxiv.org/pdf/2604.00058
+
+  - id: brixi-2026-genome-modelling-and-design-across
+    domain: genomics
+    title: Genome modelling and design across all domains of life with Evo 2
+    authors:
+      - Garyk Brixi
+      - Matthew G. Durrant
+      - Jerome Ku
+      - Mohsen Naghipourfar
+      - Michael Poli
+      - Gwanggyu Sun
+      - Evo 2 Core Team
+    year: 2026
+    doi: 10.1038/s41586-026-10176-5
+    category: genomic-foundation-models
+    pdf: papers/brixi-2026-genome-modelling-and-design-across.pdf
+    source: sources/brixi-2026-genome-modelling-and-design-across.md
+    wiki: wiki/genomics/genomic-foundation-models/brixi-2026-genome-modelling-and-design-across.md
+    status: draft
+    raw_imports:
+      - https://www.nature.com/articles/s41586-026-10176-5.pdf

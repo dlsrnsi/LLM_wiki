@@ -43,6 +43,10 @@ categories:
     description: DNA/genome foundation models and sequence representation learning.
     path: wiki/genomics/genomic-foundation-models
     page: wiki/genomics/genomic-foundation-models/category-genomic-foundation-models.md
+  genotype-language-models:
+    description: Genotype, haplotype, and LD-aware language models.
+    path: wiki/genomics/genotype-language-models
+    page: wiki/genomics/genotype-language-models/category-genotype-language-models.md
   transformer-language-models:
     description: General transformer and language-model architectures used as method foundations.
     path: wiki/machine-learning/transformer-language-models

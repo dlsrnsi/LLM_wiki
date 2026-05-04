@@ -60,4 +60,6 @@ The manuscript is still incomplete: the abstract is unwritten and several figure
 - [[machine-learning/transformer-language-models/vaswani-2017-attention-is-all-you-need]] - Method connection: GLFM uses transformer self-attention as its sequence-modeling backbone.
 - [[machine-learning/transformer-language-models/devlin-2018-bert-pre-training-of-deep]] - Method connection: GLFM follows the BERT-style masked pretraining and fine-tuning pattern.
 - [[genomics/genomic-foundation-models/dalla-torre-2025-nucleotide-transformer-building-and]] - Method connection: both use transformer-style genomic sequence representation learning, but GLFM adds LD-aware attention and causal SNP ablation.
-
+- [[genomics/genotype-language-models/huang-2026-genobert-a-language-model-for]] - Strong method connection: both use BERT-style genotype representations and LD context; GenoBERT optimizes masked genotype imputation, while GLFM uses the encoder for phenotype fine-tuning and causal SNP scoring.
+- [[genomics/genomic-foundation-models/zhou-2024-dnabert-2-efficient-foundation-model]] - Method contrast: DNABERT-2 improves sequence-tokenized DNA language modeling; GLFM shifts the language object from DNA sequence to genotype/LD locus sequence.
+- [[genomics/genomic-foundation-models/chen-2025-bmfm-dna-a-snp-aware]] - Method connection: both move beyond reference-only sequence modeling by incorporating genetic variation.
